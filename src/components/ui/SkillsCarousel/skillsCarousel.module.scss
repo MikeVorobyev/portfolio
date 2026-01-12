@@ -1,0 +1,157 @@
+.slider_container {
+    // width: 100%;     // Регулирую ширину через customClass
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: rgba(22, 27, 34, 1);
+    border-radius: 10px;
+
+    .slider_track_wrapper {
+        margin: 30px 100px;
+        overflow-x: hidden;
+        
+        // mask: linear-gradient(
+        //     90deg, 
+        //     transparent 0%, 
+        //     white 30%, 
+        //     white 70%, 
+        //     transparent 100%
+        // );
+
+        &.maskOn {
+            mask: linear-gradient(
+                90deg, 
+                transparent 0%, 
+                white 30%, 
+                white 70%, 
+                transparent 100%
+            );
+        }
+
+        .slider_track {
+            display: inline-flex;
+        }
+
+        @media (max-width: 1200px) {
+            margin: 30px 50px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 20px 30px;
+        }
+
+        @media (max-width: 360px) {
+            margin: 10px 30px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .sliderContainer {
+//   position: relative;
+//   height: 150px;
+//   width: 100%;
+//   overflow: hidden;
+//   cursor: grab;
+//   user-select: none;
+//   contain: strict; // Критически важно!
+//   isolation: isolate;
+  
+//   &.dragging {
+//     cursor: grabbing;
+//   }
+// }
+
+// .sliderTrack {
+//   display: flex;
+//   align-items: center;
+//   height: 100%;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   will-change: transform;
+//   gap: 30px;
+//   transform: translateZ(0); // Запускает GPU acceleration
+  
+//   // Для Firefox
+//   @-moz-document url-prefix() {
+//     transform: translate3d(0, 0, 0);
+//   }
+// }
+
+// .skillItem {
+//   flex-shrink: 0;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 60px;
+//   height: 60px;
+//   contain: layout style paint;
+  
+//   /* Важно: должен пропускать события мыши! */
+//   pointer-events: auto;
+  
+//   .sliderContainer:not(.dragging) & {
+//     transition: transform 0.15s ease;
+    
+//     &:hover {
+//       transform: scale(1.08);
+//     }
+//   }
+// }
+
+// .maskLeft, .maskRight {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   width: 150px;
+//   pointer-events: none;
+//   z-index: 2;
+// }
+
+// .maskLeft {
+//   left: 0;
+//   background: linear-gradient(to right, 
+//     var(--bg-color, #1a1a1a) 0%, 
+//     transparent 100%
+//   );
+// }
+
+// .maskRight {
+//   right: 0;
+//   background: linear-gradient(to left, 
+//     var(--bg-color, #1a1a1a) 0%, 
+//     transparent 100%
+//   );
+// }

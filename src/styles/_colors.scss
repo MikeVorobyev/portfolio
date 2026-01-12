@@ -1,0 +1,302 @@
+// ==================== @property РЕГИСТРАЦИЯ ====================
+
+@property --gradient-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #4CAF50;
+}
+
+@property --gradient-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #8BC34A;
+}
+
+
+// ТЕМНАЯ ТЕМА - Фоны
+@property --dark-bg-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #050905;
+}
+
+@property --dark-bg-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0a0f0a;
+}
+
+// СВЕТЛАЯ ТЕМА - Фоны
+@property --light-bg-primary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value:  #e3f2fd;
+}
+
+@property --light-bg-secondary {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #f3f9ff;
+}
+
+// ==================== ЦВЕТА ДЛЯ ТЕКСТА ====================
+:root {
+  --accent-text-green: #4CAF50;
+  --accent-text-blue: #2196F3;
+  --accent-text-orange: #FF9800;
+  --accent-text-purple: #9C27B0;
+  --accent-text-red: #F44336;
+  --accent-text-cyan: #00BCD4;
+  --accent-text-lime: #8BC34A;
+  --accent-text-brick: #FF5722;
+  --accent-text-deep-purple: #673AB7;
+  --accent-text-teal: #009688;
+}
+
+// ==================== ЦВЕТА ДЛЯ ТЕКСТА ПАСТЕЛЬНЫЕ ====================
+:root {
+  --accent-text-mint: #26A69A;        // было #48c9b0
+  --accent-text-lavender: #8E44AD;    // было #bb8fce  
+  --accent-text-peach: #FF8C00;       // было #f8c471
+  --accent-text-sky: #3498DB;         // было #85c1e9
+  --accent-text-rose: #E74C3C;        // было #f1948a
+  --accent-text-aqua: #16A085;        // было #73c6b6
+  --accent-text-lilac: #9B59B6;       // было #c39bd3
+  --accent-text-sand: #95A5A6;        // было #d7bde2
+  --accent-text-coral: #FF6B6B;       // было #f5b7b1
+  --accent-text-seafoam: #1ABC9C;     // было #76d7c4
+}
+
+// ==================== АКЦЕНТНЫЕ ГРАДИЕНТЫ (20 цветов) ====================
+:root {
+  // Основные цвета
+  --gradient-green-primary: #4CAF50;
+  --gradient-green-secondary: #8BC34A;
+  
+  --gradient-blue-primary: #2196F3;
+  --gradient-blue-secondary: #03A9F4;
+  
+  --gradient-orange-primary: #FF9800;
+  --gradient-orange-secondary: #FFB74D;
+  
+  --gradient-purple-primary: #E91E63;
+  --gradient-purple-secondary: #9C27B0; 
+  
+  --gradient-red-primary: #F44336;
+  --gradient-red-secondary: #EF5350;
+  
+  --gradient-cyan-primary: #00BCD4;
+  --gradient-cyan-secondary: #26C6DA;
+  
+  --gradient-lime-primary: #8BC34A;
+  --gradient-lime-secondary: #9CCC65;
+  
+  --gradient-brick-primary: #FF5722;
+  --gradient-brick-secondary: #FF7043;
+  
+  --gradient-deep-purple-primary: #673AB7;
+  --gradient-deep-purple-secondary: #7E57C2;
+  
+  --gradient-teal-primary: #009688;
+  --gradient-teal-secondary: #26A69A;
+
+  // Пастельные цвета
+  --gradient-mint-primary: #48c9b0;
+  --gradient-mint-secondary: #45b7af;
+  
+  --gradient-lavender-primary: #bb8fce;
+  --gradient-lavender-secondary: #a569bd;
+  
+  --gradient-peach-primary: #f8c471;
+  --gradient-peach-secondary: #f7dc6f;
+  
+  --gradient-sky-primary: #85c1e9;
+  --gradient-sky-secondary: #5dade2;
+  
+  --gradient-rose-primary: #f1948a;
+  --gradient-rose-secondary: #ec7063;
+  
+  --gradient-aqua-primary: #73c6b6;
+  --gradient-aqua-secondary: #16a085;
+  
+  --gradient-lilac-primary: #c39bd3;
+  --gradient-lilac-secondary: #af7ac5;
+  
+  --gradient-sand-primary: #d7bde2;
+  --gradient-sand-secondary: #d2b4de;
+  
+  --gradient-coral-primary: #f5b7b1;
+  --gradient-coral-secondary: #f1948a;
+  
+  --gradient-seafoam-primary: #76d7c4;
+  --gradient-seafoam-secondary: #45b7af;
+}
+
+// ==================== ТЕМНЫЕ ФОНЫ (20 цветов) ====================
+:root {
+  // Основные темные фоны
+  --dark-green-primary: #030703;
+  --dark-green-secondary: #0a1a0a;
+  
+  --dark-blue-primary: #030509;
+  --dark-blue-secondary: #0a1423;
+  
+  --dark-orange-primary: #0a0500;
+  --dark-orange-secondary: #1a0f05;
+  
+  --dark-purple-primary: #050308;
+  --dark-purple-secondary: #0f0a1f;
+  
+  --dark-red-primary: #0a0303;
+  --dark-red-secondary: #1a0a0a;
+  
+  --dark-cyan-primary: #030809;
+  --dark-cyan-secondary: #0a1a1f;
+  
+  --dark-lime-primary: #050803;
+  --dark-lime-secondary: #0f1a0a;
+  
+  --dark-brick-primary: #0a0500;
+  --dark-brick-secondary: #1a0f05;
+  
+  --dark-deep-purple-primary: #050308;
+  --dark-deep-purple-secondary: #0f0a1f;
+  
+  --dark-teal-primary: #030908;
+  --dark-teal-secondary: #0a1a1a;
+
+  // Пастельные темные фоны
+  --dark-mint-primary: #030807;
+  --dark-mint-secondary: #0a1a18;
+  
+  --dark-lavender-primary: #050308;
+  --dark-lavender-secondary: #0f0a1f;
+  
+  --dark-peach-primary: #0a0700;
+  --dark-peach-secondary: #1a1405;
+  
+  --dark-sky-primary: #030509;
+  --dark-sky-secondary: #0a1423;
+  
+  --dark-rose-primary: #0a0305;
+  --dark-rose-secondary: #1a0a0f;
+  
+  --dark-aqua-primary: #030908;
+  --dark-aqua-secondary: #0a1a18;
+  
+  --dark-lilac-primary: #050308;
+  --dark-lilac-secondary: #0f0a1f;
+  
+  --dark-sand-primary: #0a0a0a;
+  --dark-sand-secondary: #1a1a1a;
+  
+  --dark-coral-primary: #0a0500;
+  --dark-coral-secondary: #1a0f05;
+  
+  --dark-seafoam-primary: #030908;
+  --dark-seafoam-secondary: #0a1a18;
+}
+
+
+// ==================== РАЗБИТЫЕ СВЕТЛЫЕ ФОНЫ ====================
+:root {
+  // Основные светлые фоны
+  --light-bg-green-primary: #e8f5e9;
+  --light-bg-green-secondary: #f1f8e9;
+  
+  --light-bg-blue-primary: #e3f2fd;
+  --light-bg-blue-secondary: #e8f5fe;
+  
+  --light-bg-orange-primary: #fff3e0;
+  --light-bg-orange-secondary: #fff8e1;
+  
+  --light-bg-purple-primary: #f3e5f5;
+  --light-bg-purple-secondary: #f5e8fd;
+  
+  --light-bg-red-primary: #ffebee;
+  --light-bg-red-secondary: #fce4ec;
+  
+  --light-bg-cyan-primary: #e0f7fa;
+  --light-bg-cyan-secondary: #e5fafd;
+  
+  --light-bg-lime-primary: #f9fbe7;
+  --light-bg-lime-secondary: #f1f8e9;
+  
+  --light-bg-brick-primary: #fbe9e7;
+  --light-bg-brick-secondary: #fce4e2;
+  
+  --light-bg-deep-purple-primary: #ede7f6;
+  --light-bg-deep-purple-secondary: #f0e8fd;
+  
+  --light-bg-teal-primary: #e0f2f1;
+  --light-bg-teal-secondary: #e5f5f4;
+
+  // Пастельные светлые фоны
+  --light-bg-mint-primary: #e0f2f1;
+  --light-bg-mint-secondary: #e5f5f4;
+  
+  --light-bg-lavender-primary: #f3e5f5;
+  --light-bg-lavender-secondary: #f5e8fd;
+  
+  --light-bg-peach-primary: #fff3e0;
+  --light-bg-peach-secondary: #fff8e1;
+  
+  --light-bg-sky-primary: #e1f5fe;
+  --light-bg-sky-secondary: #e5f8ff;
+  
+  --light-bg-rose-primary: #fce4ec;
+  --light-bg-rose-secondary: #fce8f1;
+  
+  --light-bg-aqua-primary: #e0f7fa;
+  --light-bg-aqua-secondary: #e5fafd;
+  
+  --light-bg-lilac-primary: #f3e5f5;
+  --light-bg-lilac-secondary: #f5e8fd;
+  
+  --light-bg-sand-primary: #f5f5f5;
+  --light-bg-sand-secondary: #f0f0f0;
+  
+  --light-bg-coral-primary: #fbe9e7;
+  --light-bg-coral-secondary: #fce4e2;
+  
+  --light-bg-seafoam-primary: #e0f2f1;
+  --light-bg-seafoam-secondary: #e5f5f4;
+}
+
+
+// ==================== CSS КЛАССЫ ДЛЯ АНИМАЦИИ ====================
+// ==================== ТЕМНАЯ ТЕМА ====================
+.gradient_transition {
+  background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-secondary));
+  transition: --gradient-primary 3s ease, --gradient-secondary 3s ease;
+}
+
+.dark_bg_transition {
+  background: linear-gradient(135deg, var(--dark-bg-primary), var(--dark-bg-secondary));
+  transition: --dark-bg-primary 3s ease, --dark-bg-secondary 3s ease;
+}
+
+// ==================== СВЕТЛАЯ ТЕМА ====================
+// .light_gradient_transition {
+//   background: linear-gradient(135deg, var(--light-gradient-primary), var(--light-gradient-secondary));
+//   transition: --light-gradient-primary 3s ease, --light-gradient-secondary 3s ease;
+// }
+
+.light_bg_transition {
+  background: linear-gradient(135deg, var(--light-bg-primary), var(--light-bg-secondary));
+  transition: --light-bg-primary 3s ease, --light-bg-secondary 3s ease;
+}
+
+
+
+// Эффекты при наведении и нажатии
+// transition: filter 0.3s ease, transform 0.3s ease;
+            
+//     &:hover {
+//         transform: scale(1.05);
+//     }
+
+//     &:active {
+//         filter: brightness(0.9) saturate(0.9);
+//         transform: scale(0.9);
+//     }

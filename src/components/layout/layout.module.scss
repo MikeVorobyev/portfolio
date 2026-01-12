@@ -1,0 +1,33 @@
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 20px;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  overflow-x: hidden;
+  
+  .container {
+    max-width: 1478px;
+    margin: 0 auto;
+    width: 100%;
+
+    .main {
+      
+    }
+  }
+}
+
+.dark_bg_transition {
+  background: linear-gradient(135deg, var(--dark-bg-primary), var(--dark-bg-secondary));
+  transition: --dark-bg-primary 1s ease, --dark-bg-secondary 1s ease;
+}
+
+.light_bg_transition {
+  background: linear-gradient(135deg, var(--light-bg-primary), var(--light-bg-secondary));
+  transition: --light-bg-primary 1s ease, --light-bg-secondary 1s ease;
+}

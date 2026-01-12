@@ -1,0 +1,16 @@
+import styles from './iconTelegram.module.scss'
+
+const IconTelegram = ({ size, color, customClass }) => {
+    return (
+        <svg className={`${styles.iconTelegram} ${customClass}`} width={size} height={size} viewBox="0 0 27 25" fill="none">
+            <path className={`${styles.iconTelegram}`} id="Vector" fill={color} fillRule="nonzero"
+                d="M27.0055 1.21388C26.9708 0.305797 25.9657 -0.253961 25.1534 0.115188L0.738233 11.6802C-0.165865 12.0756 -0.265427 13.442 0.5833 13.9568L6.30556 
+                17.6981L6.30556 23.9402C6.27208 25.0656 7.75907 25.6949 8.53831 24.8649L11.9894 21.4142L16.8195 24.572C17.0349 24.713 17.2844 24.7853 17.5356 24.7853C18.0727 24.7897 
+                18.5815 24.4374 18.7627 23.93L26.9408 1.74964C27.0021 1.57475 27.0305 1.39408 27.0055 1.21388ZM19.4495 5.71168L8.89497 16.2659L3.9681 13.0448L19.4495 5.71168ZM8.92148 
+                20.7827L8.92148 19.4083L9.75263 19.9517L8.92148 20.7827ZM16.8765 21.484L11.1317 17.7282L22.4252 6.43506L16.8765 21.484Z"
+            />
+        </svg>
+    )
+}
+
+export default IconTelegram

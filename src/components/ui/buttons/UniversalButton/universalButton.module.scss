@@ -1,0 +1,38 @@
+.universalButton {
+
+  &.resetButton {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.resetLink {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    
+    &:hover {
+      text-decoration: none;
+    }
+    
+    &:focus {
+      outline: none;
+    }
+
+  }
+
+  &.gradient_transition {
+    background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-secondary));
+    transition: --gradient-primary 3s ease, --gradient-secondary 3s ease;
+  }
+}

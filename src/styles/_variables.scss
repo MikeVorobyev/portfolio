@@ -1,0 +1,17 @@
+
+
+// Плавность переходов цвета
+:root {
+  --color-transition: 0.5s ease-in-out;
+}
+
+// Тени для текста
+:root {
+  --text-shadow-light: 0 2px 2px rgba(0, 0, 0, 0.171);
+}
+
+:root {
+  --bg-color-dark: rgba(22, 27, 34, 1);
+  --bg-color-light: rgb(209, 209, 209);
+  --border-color-var:  rgba(22, 27, 34, 0.048);
+}

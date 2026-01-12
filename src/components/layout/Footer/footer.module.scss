@@ -1,0 +1,115 @@
+.footer_wrapper {
+    margin-top: 30px;
+
+    .footer {
+        padding: 50px 100px;
+
+        .logoFooter_container {
+            width: 300px;
+
+            @media (max-width: 992px) {
+                width: 150px;
+            }
+
+            @media (max-width: 576px) {
+                display: none;
+            }
+
+            .logoFooter_wrapper {
+                &.shadowOn {
+                    filter: drop-shadow(var(--text-shadow-light));
+                }
+            }
+
+            .logoFooter {
+            
+                @media (max-width: 992px) {
+                    width: 150px;
+                    height: 140px;
+                }
+
+                @media (max-width: 768px) {
+                    width: 120px;
+                    height: 110px;
+                }
+            }
+        }
+
+        .footerTitle {
+            font-size: 112px;
+
+            @media (max-width: 1200px) {
+            font-size: 72px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 52px;
+                line-height: 30px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 12vw;
+                line-height: 40px;
+            }
+
+            @media (max-width: 480px) {
+                line-height: 30px;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 11vw;
+                line-height: 20px;
+            }
+        }
+
+        .footerText_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: end;
+            align-items: end;
+
+            .footerText {
+                font-size: 20px;
+                line-height: 10px;
+                margin: 0px;
+                padding: 0px;
+
+                @media (max-width: 1200px) {
+                    font-size: 16px;
+                }
+
+                @media (max-width: 768px) {
+                    font-size: 12px;
+                }
+
+                @media (max-width: 480px) {
+                    font-size: 2.5vw;
+                }
+
+                @media (max-width: 360px) {
+                    font-size: 8px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                gap: 10px;
+            }
+            @media (max-width: 480px) {
+                gap: 7px;
+            }
+
+            @media (max-width: 360px) {
+                gap: 3px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            padding: 30px 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 30px 30px;
+        }
+    }
+}

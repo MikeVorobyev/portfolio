@@ -1,0 +1,92 @@
+.aboutSection_wrapper {
+    
+
+    .aboutSection {
+        padding: 50px 100px;
+        gap: 20px;
+
+        @media (max-width: 576px) {
+            gap: 10px;
+        }
+
+        .aboutTitle {
+            font-size: 74px;
+
+            @media (max-width: 576px) {
+                font-size: 54px;
+            }
+        }
+
+        .aboutText {
+            font-size: 26px;
+            line-height: 36px;
+            margin: 0;
+
+            @media (max-width: 1200px) {
+                font-size: 18px;
+                line-height: 28px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 12px;
+                text-align: center;
+            }
+        }
+
+        .aboutButton_wrapper {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+
+            .aboutButton {
+                background: rgba(36, 41, 56, 1);
+                text-align: center;
+                border-radius: 10px;
+                padding: 3px 20px 3px 20px;
+                transition: 0.3s ease, transform 0.3s ease;
+                
+                .aboutTextButton {
+                    font-size: 22px;
+                    line-height: 0px;
+                    transition: 2.5s ease-in-out;
+
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width:576px) {
+                        font-size: 14px;
+                    }
+                }
+
+            
+                &:hover {
+                    background: rgb(54, 59, 73);
+                    transform:  translateX(2px);
+                }
+
+                &:active {
+                    filter: brightness(0.9) saturate(0.9);
+                    transform: scale(0.9);
+                }
+            }
+
+            @media (max-width: 360px) {
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            padding: 30px 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 20px 30px;
+        }
+    }
+}

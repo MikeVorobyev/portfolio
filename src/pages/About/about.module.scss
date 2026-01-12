@@ -1,0 +1,19 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .component_container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 30px;
+
+        .skillsCarousel_settings {
+            display: flex;
+            flex-shrink: 1;
+            flex-wrap: 1;
+            min-width: 0%;
+        }
+    }
+}

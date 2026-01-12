@@ -1,0 +1,13 @@
+.title_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    text-shadow: var(--text-shadow-light);
+
+    .title {
+        line-height: 80%;
+        margin: 0px;
+        transition: var(--color-transition);
+    }
+}

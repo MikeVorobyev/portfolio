@@ -1,0 +1,263 @@
+.aboutBioCard_wrapper {
+
+    .aboutBioCard {
+        padding: 50px 100px;
+        align-items: stretch;
+
+        max-width: 100%;
+        min-height: 300px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        gap: 20px;
+        
+
+        .left_box {
+            width: auto;
+            height: 500px;
+            align-items: stretch;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.075);
+
+            .photo {
+                transition: 0.5s;
+
+                &:hover {
+                    scale: 1.05;
+                }
+
+                @media (max-width: 768px) {
+                    scale: 180%;
+                    transform: translateY(-50px);
+
+                    &:hover {
+                        scale: 185%;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    scale: 130%;
+                    
+                    &:hover {
+                        scale: 135%;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    scale: 170%;
+                    transform: translateY(-30px);
+                    
+                    &:hover {
+                        scale: 175%;
+                    }
+                }
+
+                @media (max-width: 360px) {
+                    scale: 130%;
+                    transform: translateY(-20px);
+                    
+                    &:hover {
+                        scale: 135%;
+                    }
+                }
+            }
+
+            @media (max-width: 480px) {
+                height: 300px;
+            }
+        }
+
+        .right_box {
+            height: 500px;
+            width: 65%;
+
+            .biography_wrapper {
+                overflow-y: auto;
+                border-radius: 10px;
+                padding: 15px;
+                border: 1px solid rgba(255, 255, 255, 0.021);
+                box-shadow: 
+                    inset 3px 3px 5px rgba(0, 0, 0, 0.616),
+                    inset -3px -3px 5px rgba(255, 255, 255, 0.062)
+                ;
+
+                .biography {
+                    font-size: 20px;
+                    margin: 0;
+
+                    @media (max-width: 576px) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: 360px) {
+                        font-size: 12px;
+                    }
+                }
+
+                &.white_theme{
+                    border: 1px solid rgba(0, 0, 0, 0.11);
+                    box-shadow: 
+                        inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+                        inset -3px -3px 5px rgba(175, 175, 175, 0.178)
+                    ;
+                }
+
+
+                // -------------------------------------------------------------------------------------------------------------------------------------------------
+                // Вариант для браузера FireFox
+                @supports (-moz-appearance: none) {
+                    box-shadow: none;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
+                    border-radius: 0px;
+                }
+                // -------------------------------------------------------------------------------------------------------------------------------------------------
+
+                
+            }
+
+            .btn_wrapper {
+                background: inherit;
+                background: rgba(243, 243, 243, 0.021);
+                width: 202px;
+                border-radius: 10px;
+                transition: 0.3s;
+
+                .btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    background: inherit;
+                    padding: 0px 10px;
+                    border-radius: 10px;
+                    transition: var(--color-transition);
+
+                    .btn_text {
+                        font-size: 16px;
+
+                        @media (max-width: 576px) {
+                            font-size: 16px;
+                        }
+
+                        @media (max-width: 480px) {
+                            font-size: 14px;
+                        }
+
+                        @media (max-width: 360px) {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                &:hover {
+                    background: color-mix(in srgb, var(--bg-random-color) 7%, transparent);
+                    box-shadow: 
+                        inset 3px 3px 5px rgba(0, 0, 0, 0.527),
+                        inset -3px -3px 5px rgba(255, 255, 255, 0.151)
+                    ;
+                }
+
+                &:active {
+                    background: rgba(73, 73, 73, 0.192);
+                    box-shadow: 
+                        inset 3px 3px 5px rgba(0, 0, 0, 0.616),
+                        inset -3px -3px 5px rgba(255, 255, 255, 0.062)
+                    ;
+                    scale: 0.95;
+                    transform: translateX(5px);
+                }
+
+
+                &.btn_wrapper__white_theme:hover {
+                    background: color-mix(in srgb, var(--bg-random-color) 7%, transparent);
+                    box-shadow: 
+                        inset 3px 3px 5px rgba(0, 0, 0, 0.26),
+                        inset -3px -3px 5px rgba(255, 255, 255, 0.151)
+                    ;
+                }
+
+                &.btn_wrapper__white_theme:active {
+                    box-shadow: 
+                        inset 3px 3px 5px rgba(0, 0, 0, 0.404),
+                        inset -3px -3px 5px rgba(255, 255, 255, 0.062)
+                    ;
+                    scale: 0.95;
+                    transform: translateX(5px);
+                }
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+
+        @media (max-width: 1200px) {
+            padding: 30px 50px;
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            padding: 20px 30px;
+        }
+    }
+}
+
+
+// /* Десктоп (базовые стили) */
+// .container {
+//   /* стили для больших экранов */
+// }
+
+// /* Ноутбуки / маленькие десктопы */
+// @media (max-width: 1200px) {
+//   .container {
+//     /* планшет горизонтальный */
+//   }
+// }
+
+// /* Планшеты */
+// @media (max-width: 992px) {
+//   .container {
+//     /* планшет вертикальный */
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .container {
+//     /* большой мобильный */
+//   }
+// }
+
+// /* Мобильные */
+// @media (max-width: 576px) {
+//   .container {
+//     /* маленький мобильный */
+//   }
+// }
+
+// /* Очень маленькие экраны */
+// @media (max-width: 480px) {
+//   .container {
+//     /* минимальные адаптации */
+//   }
+// }
+
+// @media (max-width: 360px) {
+//   .container {
+//     /* оптимизация для Android */
+//   }
+// }
+
+// Паддинги для контейнеров-секций
+// @media (max-width: 1200px) {
+//     padding: 30px 50px;
+// }
+
+// @media (max-width: 768px) {
+//     padding: 20px 30px;
+// }

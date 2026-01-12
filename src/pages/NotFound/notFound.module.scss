@@ -1,0 +1,106 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .content {
+        padding: 50px 100px;
+        height: 600px;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        .text {
+            font-size: 70px;
+            letter-spacing: 1.5px;
+            width: 900px;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            @media (max-width: 1200px) {
+                font-size: 50px;
+                width: 650px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 40px;
+                width: 500px;
+            }
+
+            @media (max-width: 576px) {
+                font-size: 32px;
+                width: 400px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 28px;
+                width: 55vw;
+            }
+
+            @media (max-width: 360px) {
+                font-size: 24px;
+            }
+        }
+
+        .home_btn_wrapper {
+            transition: 0.3s;
+            background: none;
+            border-radius: 20px;
+
+            .home_btn {
+                padding: 20px;
+                border-radius: 20px;
+                border: 1px solid rgba(255, 255, 255, 0.507);
+                background: inherit;
+
+                .home_btn_txt {
+                    font-size: 34px;
+
+                    @media (max-width: 768px) {
+                        font-size: 26px;
+                    }
+
+                    @media (max-width: 576px) {
+                        font-size: 22px;
+                    }
+
+                    @media (max-width: 480px) {
+                        font-size: 16px;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    padding: 15px;
+                    border-radius: 15px;
+                }
+
+                @media (max-width: 480px) {
+                    padding: 12px;
+                    border-radius: 12px;
+                }
+            }
+
+            &:hover {
+                transform: translateX(1px);
+                background: rgba(0, 0, 0, 0.034);
+            }
+
+            &:active {
+                transform: translateX(2px);
+                scale: 0.95;
+                background: rgba(0, 0, 0, 0.144);
+            }
+        }
+
+        @media (max-width: 1200px) {
+            padding: 30px 50px;
+        }
+
+        @media (max-width: 768px) {
+            padding: 30px 30px;
+        }
+    }
+}

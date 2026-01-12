@@ -1,0 +1,18 @@
+
+.contentBox {
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    box-shadow: 0 8px 32px color-mix(
+        in srgb, 
+        var(--shadow-color, black) 
+        calc(var(--shadow-opacity, 0.1) * 100%), 
+        transparent
+    );
+
+    &.gradient_transition {
+        background: linear-gradient(135deg, var(--gradient-primary), var(--gradient-secondary));
+        transition: --gradient-primary 3s ease, --gradient-secondary 3s ease;
+    }
+}
+
