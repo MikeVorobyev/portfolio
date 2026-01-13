@@ -15,13 +15,12 @@ import styles from './contactSection.module.scss'
 
 
 const ContactSection = () => {
-     const { language } = useLanguageStore()
+    const { language } = useLanguageStore()
     return (
         <ContentBox
             customClass  = { styles.contactSection }
             settings = {{
                 'justifyContent': 'space-between',
-                // 'padding': '50px 100px 50px 100px',
                 'minHeight': '0px',
             }} 
         >
@@ -35,7 +34,6 @@ const ContactSection = () => {
                     'background': 'none',
                     'maxWidth': '445px',
                     'minHeight': '0px',
-
                 }}
             >
                 <UniversalTitle

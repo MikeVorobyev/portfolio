@@ -1,17 +1,29 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import ContentBox from '../../../components/ui/ContentBox/ContentBox';
+import UniversalTitle from '../../../components/ui/UniversalTitle/UniversalTitle';
+import UniversalText from '../../../components/ui/UniversalText/UniversalText';
+import styles from './contactForm.module.scss'
+import { useLanguageStore, useColorStore, useWidthWindowStore } from '../../../stores';
 
 const ContactForm = () => {
-  // 1. Состояние формы - хранит значения полей
+  const { language } = useLanguageStore()
+  const { currentColor } = useColorStore()
+  const { widthWindow } = useWidthWindowStore()
+
+  // 1. Состояние формы
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
   
-  // 2. Статус отправки: '' | 'sending' | 'success' | 'error'
+  // 2. Статус отправки
   const [status, setStatus] = useState('');
+  
+  // 3. Состояние для уведомления
+  const [notification, setNotification] = useState(null);
 
-  // 3. Обработчик изменения полей
+  // 4. Обработчик изменения полей
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,13 +32,12 @@ const ContactForm = () => {
     }));
   };
 
-  // 4. Обработчик отправки формы
+  // 5. Обработчик отправки формы
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Отменяем стандартную отправку
-    setStatus('sending'); // Показываем "Отправка..."
+    e.preventDefault();
+    setStatus('sending');
 
     try {
-      // 5. Отправляем данные на сервер
       const response = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
@@ -38,106 +49,178 @@ const ContactForm = () => {
       const result = await response.json();
 
       if (result.success) {
-        // 6. Успешная отправка
         setStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Очищаем форму
+        setFormData({ name: '', email: '', message: '' });
+        
+        setNotification({
+          type: 'success',
+          message: language === 'en' 
+            ? `${widthWindow >= 480 ? '✅' : ''} The message has been sent! I will respond soon.` 
+            : `${widthWindow >= 480 ? '✅' : ''} Сообщение отправлено! Я отвечу в ближайшее время.`
+        });
       } else {
-        // 7. Ошибка от сервера
         setStatus('error');
-        console.error('Ошибка сервера:', result.error);
+        
+        setNotification({
+          type: 'error', 
+          message: language === 'en'
+            ? `${widthWindow >= 480 ? '❌' : ''} Sending error. Please try again.`
+            : `${widthWindow >= 480 ? '❌' : ''} Ошибка отправки. Пожалуйста, попробуйте еще раз.`
+        });
       }
     } catch (error) {
-      // 8. Ошибка сети или другая
       setStatus('error');
-      console.error('Ошибка сети:', error);
+      setNotification({
+        type: 'error',
+        message: language === 'en'
+          ? `${widthWindow >= 480 ? '❌' : ''} Network error. Please check your connection.`
+          : `${widthWindow >= 480 ? '❌' : ''} Ошибка сети. Проверьте подключение.`
+      });
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit} style={{ maxWidth: '500px', margin: '0 auto' }}>
-      <h2>Напишите мне</h2>
+  // 6. Автоскрытие уведомления
+  useEffect(() => {
+    if (notification) {
+      const timer = setTimeout(() => {
+        setNotification(null);
+      }, 5000);
       
-      {/* Поле имени */}
-      <div style={{ marginBottom: '15px' }}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Ваше имя"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          style={{ width: '100%', padding: '10px', fontSize: '16px' }}
-        />
-      </div>
+      return () => clearTimeout(timer);
+    }
+  }, [notification]);
 
-      {/* Поле email */}
-      <div style={{ marginBottom: '15px' }}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Ваш email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          style={{ width: '100%', padding: '10px', fontSize: '16px' }}
-        />
-      </div>
+  return (
+    <>
+      {/* Уведомление со стеклянным фоном */}
+      {notification && (
+        <div className={`${styles.notification} ${styles[notification.type]}`}>
+          <span className={styles.notification__text}>{notification.message}</span>
+          <button 
+            className={styles.notification__close}
+            onClick={() => setNotification(null)}
+            aria-label={language === 'en' ? 'Close' : 'Закрыть'}
+          >
+            ✕
+          </button>
+        </div>
+      )}
 
-      {/* Поле сообщения */}
-      <div style={{ marginBottom: '20px' }}>
-        <textarea
-          name="message"
-          placeholder="Ваше сообщение"
-          value={formData.message}
-          onChange={handleChange}
-          rows="5"
-          required
-          style={{ width: '100%', padding: '10px', fontSize: '16px' }}
-        />
-      </div>
-
-      {/* Кнопка отправки */}
-      <button 
-        type="submit"
-        disabled={status === 'sending'}
-        style={{
-          background: '#0070f3',
-          color: 'white',
-          border: 'none',
-          padding: '12px 24px',
-          fontSize: '16px',
-          cursor: status === 'sending' ? 'not-allowed' : 'pointer',
-          opacity: status === 'sending' ? 0.7 : 1
-        }}
+      {/* Форма (полностью твой оригинальный код) */}
+      <ContentBox 
+        customClass={ styles.contactForm }
+        settings={{
+          flexDirection: '',
+        }} 
       >
-        {status === 'sending' ? 'Отправка...' : 'Отправить сообщение'}
-      </button>
+        <ContentBox 
+          customClass={ styles.left_box }
+          settings={{
+            background: 'none',
+            flexDirection: 'column',
+            minHeight: '0px',
+            justifyContent: 'start',
+            boxShadow: 'none'
+          }} 
+        >
+          <div className={styles.text_wrapper}>
+            <UniversalTitle
+              customClass  = { `${styles.left_box_title} ${language === 'en' ? '' : styles.left_box_title_ru}` } 
+              level        = { 'h3' }
+              fontFamily   = { language === 'en' ? 'var(--font-brand-en)' : 'var(--font-brand-ru)' }
+              fontWeight   = { language === 'en' ? 700 : 400 }
+              lineHeight   = { '' }
+              align        = { widthWindow < 360 ? 'center' :  'left' }
+              titleText_en = {[ { title: 'Get in Touch', color: 'rgba(22, 27, 34, 1)' }]}
+              titleText_ru = {
+                [ 
+                    { title: 'Свяжитесь', color: 'rgba(22, 27, 34, 1)', break: widthWindow <= 768 && widthWindow > 360 ? false : true },
+                    { title: 'со мной',   color: 'rgba(22, 27, 34, 1)' }
+                ]
+              }
+            />
 
-      {/* Сообщения об статусе */}
-      {status === 'success' && (
-        <div style={{ 
-          marginTop: '15px', 
-          padding: '10px', 
-          background: '#d4edda', 
-          color: '#155724',
-          borderRadius: '4px'
-        }}>
-          ✅ Сообщение отправлено! Я отвечу в ближайшее время.
-        </div>
-      )}
+            <UniversalText
+              customClass  = { styles.left_box_text } 
+              fontFamily   = {'var(--font-subtitle-en)'}
+              color        = { ['rgba(22, 27, 34, 1)'] }  
+              contentText  = {{
+                  en: 'If you are interested in my work or want to provide feedback about this website, I am open to exchanging ideas.', 
+                  ru: 'Если вас заинтересовали мои работы или есть отзывы о сайте, я открыт для обмена идеями.' 
+              }}
+            />
+          </div>
+        </ContentBox>
 
-      {status === 'error' && (
-        <div style={{ 
-          marginTop: '15px', 
-          padding: '10px', 
-          background: '#f8d7da', 
-          color: '#721c24',
-          borderRadius: '4px'
-        }}>
-          ❌ Ошибка отправки. Пожалуйста, попробуйте еще раз.
-        </div>
-      )}
-    </form>
+        <ContentBox 
+          customClass={styles.right_box} 
+          settings={{
+            background: 'none', 
+            justifyContent: 'end',
+            boxShadow: 'none'
+          }} 
+        >
+          <form 
+            className={styles.form}
+            onSubmit={handleSubmit} 
+          >
+            
+            <div>
+                <input 
+                  className={styles.form__name}
+                  type="text"
+                  name="name"
+                  placeholder={language === 'en'? 'Your name' : 'Ваше имя'}
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                />
+            </div>
+
+            <div>
+                <input
+                  className={styles.form__email}
+                  type="email"
+                  name="email"
+                  placeholder={language === 'en'? 'Your email' : 'Ваш email'}
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+            </div>
+
+            <div>
+                <textarea
+                  className={styles.form__message}
+                  name="message"
+                  placeholder={language === 'en'? 'Your message' : 'Ваше сообщение'}
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="5"
+                  required
+                />
+            </div>
+
+            <button 
+              className={styles.form__submit_btn}
+              type="submit"
+              disabled={status === 'sending'}
+              style={{
+                cursor: status === 'sending' ? 'not-allowed' : 'pointer',
+                opacity: status === 'sending' ? 0.7 : 1,
+                color: `var(--accent-text-${currentColor})`,
+              }}
+            >
+                {
+                  status === 'sending' 
+                                  ? language === 'en' ? 'Sending...' :'Отправка...' 
+                                  : language === 'en' ? 'Send'       : 'Отправить сообщение'
+                }
+            </button>
+          </form>
+        </ContentBox>
+      </ContentBox>
+    </>
   );
 };
 

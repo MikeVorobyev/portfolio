@@ -18,6 +18,7 @@ const NameCard = () => {
     
     const [currentPhrase, setCurrentPhrase] = useState(() => phrases[language][getRandomIndex(phrases[language].length)])
     const [isChanging, setIsChanging]       = useState(false)
+    const nameLogo = ' Mike'
 
     
     // -------------------------------------------------------------------------------------------------------------------------------------------------
@@ -69,7 +70,7 @@ const NameCard = () => {
     return (
         <div className={`${styles.nameCard} ${theme === 'dark' ? '' : styles.shadowOn}`} style={{color: `var(--accent-text-${currentColor})`}}>
             <p className={`${styles.greeting} ${language === 'en'? styles.english : styles.russian}`}>{language === 'en'? "Hey There I'm" : "Привет, я"}</p>
-            <h1 className={styles.logoName}>MIKLE</h1>
+            <h1 className={styles.logoName}>{nameLogo.toUpperCase()}</h1>
 
             <div
                className={`
