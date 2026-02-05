@@ -1,10 +1,8 @@
-import { useThemeStore, useLanguageStore, useColorStore } from '../../../stores'
+import { useThemeStore, useLanguageStore, useColorStore, useWidthWindowStore } from '../../../stores'
 import styles from './footer.module.scss'
 import ContentBox from '../../ui/ContentBox/ContentBox'
 import UniversalTitle from '../../ui/UniversalTitle/UniversalTitle'
 import UniversalText from '../../ui/UniversalText/UniversalText'
-
-
 import LogoFooter from '../../icons/LogoFooter/LogoFooter'
 
 
@@ -12,6 +10,7 @@ const Footer = () => {
     const { theme }        = useThemeStore()
     const { language }     = useLanguageStore()
     const { currentColor } = useColorStore()
+    const { widthWindow }  = useWidthWindowStore()
    
     return (
         <div className={styles.footer_wrapper}>
@@ -78,24 +77,26 @@ const Footer = () => {
                     />
 
                     <div className={styles.footerText_wrapper}>
-                        <UniversalText
-                            color={['rgba(99, 107, 115, 1)', 'var(--bg-color-dark)']}
-                            customClass  = { styles.footerText }    
-                            fontFamily   = {'var(--font-subtitle-en)'}  
-                            contentText  = {{ 
-                                en: 'Development & Design: Mikle © 2026', 
-                                ru: 'Разработка и дизайн: Mikle © 2026' 
-                            }} 
-                        />
-                        <UniversalText
-                            color={['rgba(99, 107, 115, 1)', 'var(--bg-color-dark)']}
-                            customClass  = { styles.footerText }
-                            fontFamily   = {'var(--font-subtitle-en)'}  
-                            contentText  = {{ 
-                                en: 'Based on original concept by Rahul © 2024', 
-                                ru: 'На основе оригинальной концепции Rahul © 2024' 
-                            }} 
-                        />
+                        <p 
+                            className={ styles.footerText }
+                            style={{color: theme === 'dark' ? 'rgba(99, 107, 115, 1)' : 'var(--bg-color-dark)'}}
+                        >
+                            {
+                                language === 'en' 
+                                    ? widthWindow <= 480 ? 'Design: Mike © 2026' : 'Development & Design: Mike © 2026'
+                                    : widthWindow <= 480 ? 'Дизайн: Михаил © 2026' : 'Разработка и дизайн: Михаил © 2026'
+                            }
+                        </p>
+                        <p 
+                            className={ styles.footerText }
+                            style={{color: theme === 'dark' ? 'rgba(99, 107, 115, 1)' : 'var(--bg-color-dark)'}}
+                        >
+                            {
+                                language === 'en' 
+                                    ? widthWindow <= 480 ? 'Concept by Rahul © 2024' : 'Based on original concept by Rahul © 2024'
+                                    : widthWindow <= 768 ? 'Концепция: Rahul © 2024' : 'На основе оригинальной концепции Rahul © 2024'
+                            }
+                        </p>
                     </div>
                 </ContentBox>
             </ContentBox>

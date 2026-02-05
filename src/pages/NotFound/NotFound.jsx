@@ -8,8 +8,8 @@ import UniversalButton from '../../components/ui/buttons/UniversalButton/Univers
 import styles from './notFound.module.scss'
 
 const NotFound = () => {
-    const { language }    = useLanguageStore()
-    const { widthWindow } = useWidthWindowStore()
+    const { language }     = useLanguageStore()
+    const { widthWindow }  = useWidthWindowStore()
     const getLayoutElement = () => document.querySelector('[class*="layout"]') // Получаем компонент c классом layout
 
 

@@ -4,20 +4,10 @@
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    background-color: rgba(22, 27, 34, 1);
     border-radius: 10px;
 
     .slider_track_wrapper {
-        margin: 30px 100px;
         overflow-x: hidden;
-        
-        // mask: linear-gradient(
-        //     90deg, 
-        //     transparent 0%, 
-        //     white 30%, 
-        //     white 70%, 
-        //     transparent 100%
-        // );
 
         &.maskOn {
             mask: linear-gradient(
@@ -31,18 +21,6 @@
 
         .slider_track {
             display: inline-flex;
-        }
-
-        @media (max-width: 1200px) {
-            margin: 30px 50px;
-        }
-
-        @media (max-width: 768px) {
-            margin: 20px 30px;
-        }
-
-        @media (max-width: 360px) {
-            margin: 10px 30px;
         }
     }
 }

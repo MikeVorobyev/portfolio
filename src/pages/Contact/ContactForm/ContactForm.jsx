@@ -145,8 +145,8 @@ const ContactForm = () => {
               fontFamily   = {'var(--font-subtitle-en)'}
               color        = { ['rgba(22, 27, 34, 1)'] }  
               contentText  = {{
-                  en: 'If you are interested in my work or want to provide feedback about this website, I am open to exchanging ideas.', 
-                  ru: 'Если вас заинтересовали мои работы или есть отзывы о сайте, я открыт для обмена идеями.' 
+                  en: "If you're interested in my work or have feedback about the site, feel free to drop me an email. I'm open to exchanging ideas.", 
+                  ru: "Если вас заинтересовали мои работы или есть отзывы о сайте, напишите мне на почту, я открыт для обмена идеями." 
               }}
             />
           </div>

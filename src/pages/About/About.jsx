@@ -1,5 +1,5 @@
-import { useRef} from 'react';
-import { useWidthWindowStore } from '../../stores'
+import { useRef} from 'react'
+import { useWidthWindowStore, useThemeStore } from '../../stores'
 import styles from './about.module.scss'
 import PageTitle from '../../components/ui/PageTitle/PageTitle'
 import AboutBioCard from './page-components/AboutBioCard/AboutBioCard'
@@ -8,6 +8,7 @@ import AboutSocial from './page-components/AboutSocial/AboutSocial'
 
 const About = () => {
     const { widthWindow } = useWidthWindowStore()
+    const { theme } = useThemeStore()
     const skillsRef = useRef([
         { id: 'JavaScript',     title: 'JavaScript',       color: false},
         { id: 'CSS',            title: 'CSS',              color: true },
@@ -39,7 +40,17 @@ const About = () => {
             <AboutBioCard />
 
             <div className={styles.component_container}>
-                <SkillsCarousel skillsRef = {skillsRef} customClass = {styles.skillsCarousel_settings} />
+                <SkillsCarousel 
+                    skillsRef   = { skillsRef } 
+                    customClass = { styles.skillsCarousel_settings }
+                    marginClass = { styles.marginClass }
+                    iconSize    = {
+                        widthWindow <= 480 ? 30 :
+                        widthWindow <= 768 ? 50 : 70
+                    } 
+                    iconGap    = { widthWindow <= 480 ? 15 : 30 }
+                    settings   = {{background: `${theme === 'dark' ? 'rgba(22, 27, 34, 1)' : 'white'}`}}
+                />
                 {widthWindow > 992 && <AboutSocial /> }
             </div>
 

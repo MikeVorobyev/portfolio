@@ -74,33 +74,27 @@
                 line-height: 10px;
                 margin: 0px;
                 padding: 0px;
+                font-family: var(--font-subtitle-en);
 
                 @media (max-width: 1200px) {
                     font-size: 16px;
                 }
 
                 @media (max-width: 768px) {
-                    font-size: 12px;
+                    font-size: 14px;
                 }
 
                 @media (max-width: 480px) {
-                    font-size: 2.5vw;
-                }
-
-                @media (max-width: 360px) {
-                    font-size: 8px;
+                    font-size: 12px;
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1200px) {
                 gap: 10px;
             }
+
             @media (max-width: 480px) {
                 gap: 7px;
-            }
-
-            @media (max-width: 360px) {
-                gap: 3px;
             }
         }
 

@@ -1,0 +1,304 @@
+:root {
+    --padding-side-big  : 100px;
+    --padding-side-midle: 50px;
+    --padding-side-small: 30px;
+}
+
+.videoPreview {
+    display: grid;
+    grid-template-areas: 
+        "buttons"
+        "player";
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    .buttons {
+        grid-area: buttons;
+        display: flex;
+        gap: 8px;
+
+        .button_youTube {
+            font-size: 14px;
+            padding: 15px 30px;
+            border-radius: 10px 10px 0px 0px;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.164);
+            cursor: pointer;
+
+            @media (max-width: 576px) {
+                font-size: 12px;
+                padding: 15px 20px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 10px;
+                padding: 15px 15px;
+            }
+
+            &.dark_theme {
+                background-color: rgba(22, 27, 34, 1);
+            }
+
+            &.white_theme{
+                background-color: white;
+            }
+
+            // &.onFirstplan_youTube_btn  {
+            //     border-top: 1px solid rgba(255, 255, 255, 0.164);
+            // }
+
+            &.dark_theme.onBackplan_youTube_btn {
+                background-color: rgba(12, 15, 20, 0.8);
+            }
+
+            &.white_theme.onBackplan_youTube_btn{
+                background-color: rgba(219, 219, 219, 0.336);
+                border: 1px solid rgba(216, 215, 215, 0.048);
+                border-top: 1px solid rgb(255, 255, 255);
+                border-bottom: none;
+            }
+        }
+
+        .button_ruTube {
+            font-size: 14px;
+            padding: 15px 30px;
+            border-radius: 10px 10px 0px 0px;
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.164);
+            cursor: pointer;
+
+            @media (max-width: 576px) {
+                font-size: 12px;
+                padding: 15px 20px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 10px;
+                padding: 15px 15px;
+            }
+
+            &.dark_theme {
+                background-color: rgba(22, 27, 34, 1);
+            }
+
+            &.white_theme{
+                background-color: white;
+            }
+
+            // &.onFirstplan_ruTube_btn  {
+            //     border-top: 1px solid rgba(255, 255, 255, 0.164);
+            // }
+
+            &.dark_theme.onBackplan_ruTube_btn {
+                background-color: rgba(12, 15, 20, 0.8);
+            }
+
+            &.white_theme.onBackplan_ruTube_btn {
+                background-color: rgba(219, 219, 219, 0.336);
+                border: 1px solid rgba(216, 215, 215, 0.048);
+                border-top: 1px solid rgb(255, 255, 255);
+                border-bottom: none;
+            }
+        }
+
+    }
+
+
+    .player_container {
+        grid-area: player;
+        position: relative;
+        z-index: 50;
+
+        .youTube_wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 10px 10px 10px;
+            display: none;
+            display: flex;
+
+            &.onFirstplan {
+                z-index: 10;
+            }
+
+            &.onBackplan {
+                border-radius: 10px 10px 10px 10px;
+            }
+
+            .youTube_player_container {
+                width: calc(100% - (var(--padding-side-big) * 2.5));
+                height: 80%;
+                border-radius: 10px;
+
+                @media (max-width: 1200px) {
+                    width: calc(100% - (var(--padding-side-midle) * 2));
+                }
+
+                @media (max-width: 992px) {
+                    width: calc(100% - (var(--padding-side-midle) * 4));
+                }
+
+                @media (max-width: 768px) {
+                    width: calc(100% - (var(--padding-side-small) * 4));
+                }
+
+                @media (max-width: 480px) {
+                    width: calc(100% - (var(--padding-side-small) * 2));
+                }
+
+                .youTube_bg {
+                    position: absolute;
+                    z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: calc(100% - (var(--padding-side-big) * 2));
+                    height: 90%;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+
+                    @media (max-width: 1200px) {
+                        display: none;
+                    }
+
+                    @media (max-width: 992px) {
+                        display: block;
+                        width: calc(100% - (var(--padding-side-midle) * 2));
+                    }
+
+                    @media (max-width: 768px) {
+                        width: calc(100% - (var(--padding-side-small) * 2));
+                    }
+
+                    @media (max-width: 480px) {
+                        display: none;
+                    }
+                }
+
+                .youTube_player {
+                    position: relative;
+                    z-index: 5;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    border: solid 2px rgba(255, 255, 255, 0.07);
+
+                    @media (max-width: 1200px) {
+                        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+                        border: none;
+                    }
+
+                    @media (max-width: 992px) {
+                        box-shadow: none;
+                        border: solid 2px rgba(255, 255, 255, 0.07);
+                    }
+
+                    @media (max-width: 480px) {
+                       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+                       border: none;
+                    }
+                }
+            }
+        }
+
+        .ruTube_wrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 0px 10px 10px 10px;
+            display: none;
+
+            &.onFirstplan {
+                z-index: 10;
+                display: flex;
+                border-radius: 10px 10px 10px 10px;
+            }
+
+            &.onBackplan {}
+
+            .ruTube_player_container {
+                width: calc(100% - (var(--padding-side-big) * 2.5));
+                height: 80%;
+                border-radius: 10px;
+
+                @media (max-width: 1200px) {
+                    width: calc(100% - (var(--padding-side-midle) * 2));
+                }
+
+                @media (max-width: 992px) {
+                    width: calc(100% - (var(--padding-side-midle) * 4));
+                }
+
+                @media (max-width: 768px) {
+                    width: calc(100% - (var(--padding-side-small) * 4));
+                }
+
+                @media (max-width: 480px) {
+                    width: calc(100% - (var(--padding-side-small) * 2));
+                }
+
+                .ruTube_bg {
+                    position: absolute;
+                    z-index: 1;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: calc(100% - (var(--padding-side-big) * 2));
+                    height: 90%;
+                    border-radius: 10px;
+                    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+
+                    @media (max-width: 1200px) {
+                        display: none;
+                    }
+
+                    @media (max-width: 992px) {
+                        display: block;
+                        width: calc(100% - (var(--padding-side-midle) * 2));
+                    }
+
+                    @media (max-width: 768px) {
+                        width: calc(100% - (var(--padding-side-small) * 2));
+                    }
+
+                    @media (max-width: 480px) {
+                        display: none;
+                    }
+                }
+
+                .ruTube_player {
+                    position: relative;
+                    z-index: 5;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                    border: solid 2px rgba(255, 255, 255, 0.07);
+
+                    @media (max-width: 1200px) {
+                        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+                        border: none;
+                    }
+
+                    @media (max-width: 992px) {
+                        box-shadow: none;
+                        border: solid 2px rgba(255, 255, 255, 0.07);
+                    }
+
+                    @media (max-width: 480px) {
+                       box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+                       border: none;
+                    }
+                }
+            }
+        }
+    }
+}

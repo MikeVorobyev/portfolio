@@ -78,7 +78,7 @@
     }
 
     @media (max-width: 480px) {
-      font-size: 38px;
+      font-size: 54px;
     }
   }
 
@@ -168,11 +168,6 @@
       background: rgba(255, 255, 255, 0.295);
     }
 
-    &:active {
-      filter: brightness(0.9) saturate(0.9);
-      transform: scale(0.9);
-    }
-
     @media (max-width: 768px) {
       border-radius: 10px;
     }
@@ -191,7 +186,6 @@
   }
 
   &:hover {
-    // background: rgba(255, 255, 255, 0.295);
     transform:  translateX(2px);
 
     .telegram {
@@ -201,6 +195,10 @@
         animation: none;
       }
     }
+  }
+
+  &:active {
+    scale: 95%;
   }
 }
 
