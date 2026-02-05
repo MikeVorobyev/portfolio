@@ -57,6 +57,7 @@ const Header = () => {
                         <div className={`${styles.links_wrapper} ${openMenu ? styles.open_links : ''}`}>
                             <NavLink 
                                 to='/'
+                                // eslint-disable-next-line no-sequences
                                 onClick={() => (scrollTop(), setOpenMenu((prev) => !prev))}
                                 className={
                                    `${styles.nav_link} 
@@ -72,6 +73,7 @@ const Header = () => {
 
                             <NavLink 
                                 to='/about'
+                                // eslint-disable-next-line no-sequences
                                 onClick={() => (scrollTop(), setOpenMenu((prev) => !prev))}
                                 className={
                                 `${styles.nav_link} 
@@ -87,6 +89,7 @@ const Header = () => {
 
                             <NavLink 
                                 to='/projects'
+                                // eslint-disable-next-line no-sequences
                                 onClick={() => (scrollTop(), setOpenMenu((prev) => !prev))}
                                 className={
                                 `${styles.nav_link} 
@@ -102,6 +105,7 @@ const Header = () => {
 
                             <NavLink 
                                 to='/contact' 
+                                // eslint-disable-next-line no-sequences
                                 onClick={() => (scrollTop(), setOpenMenu((prev) => !prev))}
                                 className={
                                 `${styles.nav_link}
