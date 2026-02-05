@@ -80,6 +80,7 @@ const UniversalText = ({
         })
 
         setContent(parsedContent)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [language, currentColor, theme])
 
     return (

@@ -29,7 +29,7 @@ const AboutBioCard = () => {
                         'boxShadow': 'none',
                     }}
                 >
-                    <img className={styles.photo} src={Mikle_photo} alt="Mikle Photo" />
+                    <img className={styles.photo} src={Mikle_photo} alt="Mikle" />
                 </ContentBox>
 
                 <ContentBox

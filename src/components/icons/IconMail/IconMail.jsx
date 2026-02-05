@@ -2,7 +2,7 @@ import styles from './iconMail.module.scss'
 
 const IconMail = ({ size, color, customClass = '' }) => {
     return (
-    <svg className = {customClass} width={size} height={size} viewBox="0 0 455 455"  fill={color} xmlns="http://www.w3.org/2000/svg">
+    <svg className={`${styles.iconMail} ${customClass}`} width={size} height={size} viewBox="0 0 455 455"  fill={color} xmlns="http://www.w3.org/2000/svg">
         <path fill={color} id="Форма 1" 
             d="M129.066 134.666C146.666 149.2 209.6 196.533 213.466 198.266C218.799 200.533 228.533 200.8 234.533 198.666C238.933 
             197.2 252.666 187.2 301.866 149.2L327.199 129.733L358.532 129.6C385.999 129.6 392.367 129.733 397.034 127.599C408.767 122.266 409.066 115.733 409.199 

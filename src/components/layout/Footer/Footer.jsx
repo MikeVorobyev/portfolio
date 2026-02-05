@@ -2,9 +2,7 @@ import { useThemeStore, useLanguageStore, useColorStore, useWidthWindowStore } f
 import styles from './footer.module.scss'
 import ContentBox from '../../ui/ContentBox/ContentBox'
 import UniversalTitle from '../../ui/UniversalTitle/UniversalTitle'
-import UniversalText from '../../ui/UniversalText/UniversalText'
 import LogoFooter from '../../icons/LogoFooter/LogoFooter'
-
 
 const Footer = () => {
     const { theme }        = useThemeStore()

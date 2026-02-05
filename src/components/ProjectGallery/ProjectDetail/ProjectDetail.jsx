@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useThemeStore,useLanguageStore, useColorStore, useWidthWindowStore } from '../../../stores'
+import { useLanguageStore, useColorStore, useWidthWindowStore } from '../../../stores'
 import projects from '../projectsData'
 import styles from './projectDetail.module.scss'
 import PageTitle from '../../ui/PageTitle/PageTitle'
@@ -14,7 +14,6 @@ import IconDemo from '../../icons/IconDemo/IconDemo'
 import IconGithub from '../../icons/IconGithub/IconGithub'
 
 const ProjectDetail = () => {
-    const { theme }        = useThemeStore()
     const { language }     = useLanguageStore()
     const { currentColor } = useColorStore()
     const { widthWindow }  = useWidthWindowStore()

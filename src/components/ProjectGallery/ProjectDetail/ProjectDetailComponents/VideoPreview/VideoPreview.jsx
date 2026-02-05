@@ -106,6 +106,7 @@ const VideoPreview = ({ videoYouTube, videoRuTube }) => {
                         <iframe
                             className={styles.ruTube_player}
                             src={videoRuTube}
+                            title="RuTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                             webkitAllowFullScreen 
                             mozallowfullscreen 

@@ -1,5 +1,5 @@
 
-import { useCallback, useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 import { useWidthWindowStore, useLanguageStore, useThemeStore, useColorStore, useAccordionStore } from '../../../stores'
 import styles from './projectCard.module.scss'
 import UniversalTitle from '../../ui/UniversalTitle/UniversalTitle'

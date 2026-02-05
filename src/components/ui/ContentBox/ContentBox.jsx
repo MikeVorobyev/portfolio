@@ -80,6 +80,7 @@ const ContentBox = ({
         applyMediaQueries();
         window.addEventListener('resize', applyMediaQueries);
         return () => window.removeEventListener('resize', applyMediaQueries);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentColor, theme, shadowOpacity])
 
     return (

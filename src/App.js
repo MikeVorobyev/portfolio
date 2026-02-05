@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
 import { useColorStore, useThemeStore } from './stores'
-import projects from './components/ProjectGallery/projectsData' // Импортируем проекты
 
 import styles from './App.module.scss'
 import './styles/global.scss'

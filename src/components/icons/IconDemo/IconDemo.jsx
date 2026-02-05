@@ -2,7 +2,7 @@ import styles from './iconDemo.module.scss'
 
 const IconDemo = ({ size, color, customClass }) => {
     return (
-        <svg className={customClass} viewBox="0 0 72 50" xmlns="http://www.w3.org/2000/svg" width={size || 72} height={size || 50} fill="none">
+        <svg className={`${styles.iconDemo} ${customClass}`} viewBox="0 0 72 50" xmlns="http://www.w3.org/2000/svg" width={size || 72} height={size || 50} fill="none">
             <path fill={color || "black"} fillRule="nonzero" 
                 d="M7.2 7.125C7.2 3.19512 10.4287 0 14.4 0L57.6 0C61.5712 0 64.8 3.19512 64.8 7.125L64.8 35.625L57.6 35.625L57.6 7.125L14.4 7.125L14.4 35.625L7.2 35.625L7.2 
                 7.125ZM0 41.325C0 40.1449 0.9675 39.1875 2.16 39.1875L69.84 39.1875C71.0325 39.1875 72 40.1449 72 41.325C72 46.0453 68.13 49.875 
