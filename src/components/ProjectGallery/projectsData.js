@@ -1,10 +1,10 @@
-import IconReact from '../icons/skilsForCards/IconReact/IconReact';
+// import IconReact from '../icons/skilsForCards/IconReact/IconReact';
 import IconJS from '../icons/skilsForCards/IconJS/IconJS';
-import IconZustand from '../icons/skilsForCards/IconZustand/IconZustand';
+// import IconZustand from '../icons/skilsForCards/IconZustand/IconZustand';
 import IconHTML from '../icons/skilsForCards/IconHTML/IconHTML';
 import IconCSS from '../icons/skilsForCards/IconCSS/IconCSS';
-import IconSCSS from '../icons/skilsForCards/IconSCSS/IconSCSS';
-import IconPixo from '../icons/skilsForCards/IconPixo/IconPixo';
+// import IconSCSS from '../icons/skilsForCards/IconSCSS/IconSCSS';
+// import IconPixo from '../icons/skilsForCards/IconPixo/IconPixo';
 import IconFigma from '../icons/skilsForCards/IconFigma/IconFigma';
 import IconAdobePhotoshop from '../icons/skilsForCards/IconAdobePhotoshop/IconAdobePhotoshop';
 import IconJQuery from '../icons/skilsForCards/IconJQuery/IconJQuery';

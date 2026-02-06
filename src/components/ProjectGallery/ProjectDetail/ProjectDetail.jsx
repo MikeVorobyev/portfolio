@@ -22,8 +22,8 @@ const ProjectDetail = () => {
     const { 
         title_en, 
         title_ru,
-        mobile_title_en,
-        mobile_title_ru,
+        // mobile_title_en,
+        // mobile_title_ru,
         header_title_short_en,
         header_title_short_ru,
         subtitle_en,
