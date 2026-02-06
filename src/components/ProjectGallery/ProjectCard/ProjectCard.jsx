@@ -142,8 +142,8 @@ const ProjectCard = ({ shadowOpacity = 0.1, project }) => {
                     customClass  = { styles.header_title__mobile }
                     fontFamily   = { language === 'en' ? 'var(--font-text-en)' : 'var(--font-text-ru)' }
                     fontWeight   = { 400 }
-                    titleText_en = {[ { title: project.title_en, color: ['#000', '#FFF'] }]} 
-                    titleText_ru = {[ { title: project.title_ru, color: ['#000', '#FFF'] }]}
+                    titleText_en = {[ { title: widthWindow > 480 ? project.title_en : project.mobile_title_en, color: ['#000', '#FFF'] }]} 
+                    titleText_ru = {[ { title: widthWindow > 480 ? project.title_ru : project.mobile_title_ru, color: ['#000', '#FFF'] }]}
                 />
 
                 <div 

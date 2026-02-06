@@ -56,9 +56,15 @@
 
                 .title {
                     font-size: 46px;
+                    line-height: 110%;
 
                     @media (max-width: 768px) {
                         font-size: 36px;
+                    }
+
+                    @media (max-width: 576px) {
+                        text-align: center;
+                        font-size: 30px;
                     }
                 }
 

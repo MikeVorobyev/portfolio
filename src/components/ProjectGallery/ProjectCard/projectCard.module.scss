@@ -54,8 +54,9 @@
         
         .title {
             font-size: 32px;
+            line-height: 120%;
         }
-        
+
         .subtitle {
             font-size: 18px;
         }
@@ -171,6 +172,8 @@
         .header_title__mobile {
             font-size: 26px;
             padding: 0px;
+            line-height: 120%;
+            padding-right: 10px;
 
             @media (max-width: 576px) {
                 font-size: 20px;

@@ -22,6 +22,10 @@ const ProjectDetail = () => {
     const { 
         title_en, 
         title_ru,
+        mobile_title_en,
+        mobile_title_ru,
+        header_title_short_en,
+        header_title_short_ru,
         subtitle_en,
         subtitle_ru,
         description_en,
@@ -50,8 +54,8 @@ const ProjectDetail = () => {
     return (
         <div className={styles.projectDetail}>
             <PageTitle 
-                pageTitle_en = {title_en.toLocaleUpperCase()} 
-                pageTitle_ru = {title_ru.toLocaleUpperCase()}
+                pageTitle_en = { widthWindow > 992 ? title_en.toUpperCase() : header_title_short_en.toUpperCase() } 
+                pageTitle_ru = { widthWindow > 992 ? title_ru.toUpperCase() : header_title_short_ru.toUpperCase() }
             />
 
             <div className={styles.content_wrapper}>
