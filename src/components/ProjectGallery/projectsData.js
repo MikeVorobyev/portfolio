@@ -1,10 +1,10 @@
-// import IconReact from '../icons/skilsForCards/IconReact/IconReact';
+import IconReact from '../icons/skilsForCards/IconReact/IconReact';
 import IconJS from '../icons/skilsForCards/IconJS/IconJS';
-// import IconZustand from '../icons/skilsForCards/IconZustand/IconZustand';
+import IconZustand from '../icons/skilsForCards/IconZustand/IconZustand';
 import IconHTML from '../icons/skilsForCards/IconHTML/IconHTML';
 import IconCSS from '../icons/skilsForCards/IconCSS/IconCSS';
-// import IconSCSS from '../icons/skilsForCards/IconSCSS/IconSCSS';
-// import IconPixo from '../icons/skilsForCards/IconPixo/IconPixo';
+import IconSCSS from '../icons/skilsForCards/IconSCSS/IconSCSS';
+import IconPixo from '../icons/skilsForCards/IconPixo/IconPixo';
 import IconFigma from '../icons/skilsForCards/IconFigma/IconFigma';
 import IconAdobePhotoshop from '../icons/skilsForCards/IconAdobePhotoshop/IconAdobePhotoshop';
 import IconJQuery from '../icons/skilsForCards/IconJQuery/IconJQuery';
@@ -16,6 +16,118 @@ import IconJQuery from '../icons/skilsForCards/IconJQuery/IconJQuery';
 // header_title_short_en - короткая версия для шапки-хедера('PageTitlrs') в самом верху страниц
 
 const projects = [
+        { 
+        id: 11,
+        slug: 'portfolio',
+        title_en: 'Portfolio',
+        title_ru: 'Портфолио',
+        mobile_title_en: 'Portfolio',
+        mobile_title_ru: 'Портфолио',
+        header_title_short_en: 'Portfolio',
+        header_title_short_ru: 'Портфолио',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/11-portfolio.jpg'),
+        iconSkills: [ IconReact, IconJS, IconZustand, IconSCSS, IconPixo, IconAdobePhotoshop, ],
+        description_en: 'Portfolio description.',
+        description_ru: 'Портфолио описание',
+        demo: 'https://portfolio-ivory-eta-yqlgrhzd54.vercel.app/',
+        gitHubLink: 'https://github.com/MikeVorobyev/portfolio',
+        videoYouTube: 'https://www.youtube.com/embed/QlPuT0hry2Y',
+        videoRuTube: 'https://rutube.ru/play/embed/95a07e89c17ef6d847338afa312f3ccc/',
+        mainFeatures: [
+            { 
+                featuresTitle_en: 'Pumpkin:', 
+                featuresTitle_ru: 'Заглушка:', 
+                featuresDescription_en: 'Pumpkin text',  
+                featuresDescription_ru: 'Заглушка текст', 
+            },
+        ],
+    },
+    { 
+        id: 10,
+        slug: 'silver-mask',
+        title_en: 'The Silver Mask',
+        title_ru: 'Серебряная Маска',
+        mobile_title_en: 'The Silver Mask',
+        mobile_title_ru: 'Серебряная Маска',
+        header_title_short_en: 'Silver Mask',
+        header_title_short_ru: 'Серебряная Маска',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/10-silver-mask.jpg'),
+        iconSkills: [ IconReact, IconJS, IconZustand, IconSCSS, IconPixo, IconAdobePhotoshop, ],
+        description_en: 'The Silver Mask description.',
+        description_ru: 'Серебряная Маска описание',
+        demo: 'https://silver-mask.vercel.app/',
+        gitHubLink: 'https://github.com/MikeVorobyev/silver-mask',
+        videoYouTube: 'https://www.youtube.com/embed/QlPuT0hry2Y',
+        videoRuTube: 'https://rutube.ru/play/embed/95a07e89c17ef6d847338afa312f3ccc/',
+        mainFeatures: [
+            { 
+                featuresTitle_en: 'Pumpkin:', 
+                featuresTitle_ru: 'Заглушка:', 
+                featuresDescription_en: 'Pumpkin text',  
+                featuresDescription_ru: 'Заглушка текст', 
+            },
+        ],
+    },
+    { 
+        id: 9,
+        slug: 'todo-for-kids',
+        title_en: 'To Do For Kids',
+        title_ru: 'Список дел для детей',
+        mobile_title_en: 'To Do For Kids',
+        mobile_title_ru: 'Список дел для детей',
+        header_title_short_en: 'To Do',
+        header_title_short_ru: 'To Do',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/9-todo-for-kids.jpg'),
+        iconSkills: [ IconReact, IconJS, IconZustand, IconSCSS, IconFigma, IconPixo, IconAdobePhotoshop, ],
+        description_en: 'To Do For Kids description.',
+        description_ru: 'Список дел для детей описание',
+        demo: 'https://todo-for-kids.vercel.app/',
+        gitHubLink: 'https://github.com/MikeVorobyev/todo-for-kids',
+        videoYouTube: 'https://www.youtube.com/embed/QlPuT0hry2Y',
+        videoRuTube: 'https://rutube.ru/play/embed/95a07e89c17ef6d847338afa312f3ccc/',
+        mainFeatures: [
+            { 
+                featuresTitle_en: 'Pumpkin:', 
+                featuresTitle_ru: 'Заглушка:', 
+                featuresDescription_en: 'Pumpkin text',  
+                featuresDescription_ru: 'Заглушка текст', 
+            },
+        ],
+    },
+    { 
+        id: 8,
+        slug: 'organic-healthy-fresh',
+        title_en: 'Organic Healthy Fresh',
+        title_ru: 'Organic Healthy Fresh',
+        mobile_title_en: 'Organic Healthy Fresh',
+        mobile_title_ru: 'Organic Healthy Fresh',
+        header_title_short_en: 'Healthy Fresh',
+        header_title_short_ru: 'Healthy Fresh',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/8-organic_healthy-fresh.jpg'),
+        iconSkills: [ IconReact, IconJS, IconSCSS, IconFigma, ],
+        description_en: 'Organic Healthy Fresh description.',
+        description_ru: 'Organic Healthy Fresh описание',
+        demo: 'https://organic-healthy-fresh.vercel.app/',
+        gitHubLink: 'https://github.com/MikeVorobyev/Organic-Healthy-Fresh',
+        videoYouTube: 'https://www.youtube.com/embed/QlPuT0hry2Y',
+        videoRuTube: 'https://rutube.ru/play/embed/95a07e89c17ef6d847338afa312f3ccc/',
+        mainFeatures: [
+            { 
+                featuresTitle_en: 'Pumpkin:', 
+                featuresTitle_ru: 'Заглушка:', 
+                featuresDescription_en: 'Pumpkin text',  
+                featuresDescription_ru: 'Заглушка текст', 
+            },
+        ],
+    },
     { 
         id: 7,
         slug: 'roman-numerals-converter',
@@ -48,11 +160,11 @@ const projects = [
         id: 6,
         slug: 'to-do',
         title_en: 'To Do',
-        title_ru: 'To Do',
+        title_ru: 'Список дел',
         mobile_title_en: 'To Do',
-        mobile_title_ru: 'To Do',
+        mobile_title_ru: 'Список дел',
         header_title_short_en: 'To Do',
-        header_title_short_ru: 'To Do',
+        header_title_short_ru: 'Список дел',
         subtitle_en: 'Frontend',
         subtitle_ru: 'Frontend',
         screenshot: require('../../images/projects_images/image_portfolio/6-to_do.jpg'),
