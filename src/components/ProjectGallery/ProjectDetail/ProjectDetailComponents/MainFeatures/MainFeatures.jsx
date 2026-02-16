@@ -55,6 +55,7 @@ const MainFeatures = ({ mainFeatures }) => {
                         <UniversalText
                             customClass={styles.list_description}  
                             color        = { ['#8B949E', '#4e4e4e'] }
+                            enableAccent = { true }
                             fontFamily   = { language === 'en' ? 'var( --font-button-secondary-en)' : 'var( --font-button-secondary-ru)' }
                             fontWeight   = { 400 }
                             contentText  = { { 

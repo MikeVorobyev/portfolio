@@ -17,6 +17,7 @@
         grid-area: buttons;
         display: flex;
         gap: 8px;
+        -webkit-tap-highlight-color: transparent;
 
         .button_youTube {
             font-size: 14px;
