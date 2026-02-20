@@ -30,7 +30,7 @@ const AboutSocial = ({ customClass  = '' }) => {
 
                 <UniversalButton 
                     customClass  = { styles.bottom_box_btn }
-                    href         = { "https://t.me/MikhailVi1"}
+                    href         = { "https://t.me/idVma"}
                     settings = {{
                         'boxShadow': 'none',
                         'filter': 'drop-shadow(var(--text-shadow-light))',

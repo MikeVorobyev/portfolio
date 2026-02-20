@@ -6,7 +6,7 @@ import { useThemeStore } from '../../../../../stores'
 
 const VideoPreview = ({ videoYouTube, videoRuTube }) => {
     const { theme } = useThemeStore()
-    const [activePlayer, setActivePlayer] = useState('youtube')
+    const [activePlayer, setActivePlayer] = useState('rutube')
 
     // Генерирует новый случайный hue при каждом изменении currentColor
     const hueValueYouTube = useMemo(() => Math.round(Math.random() * 360), [])

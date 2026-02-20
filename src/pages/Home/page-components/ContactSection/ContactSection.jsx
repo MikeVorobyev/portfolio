@@ -136,7 +136,7 @@ const ContactSection = () => {
                 <div className={styles.bottom_box}>
                     <UniversalButton 
                         customClass  = { styles.bottom_box_btn }
-                        href         = { "https://t.me/MikhailVi1"} 
+                        href         = { "https://t.me/idVma"} 
 
                     >
                         <div className = {styles.btn_content_container}>

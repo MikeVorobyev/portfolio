@@ -33,6 +33,30 @@ import styles from './universalText.module.scss'
 // ★ Inline-стили (fontSize) имеют высший приоритет над CSS
 // ★ При enableAccent={false} текст в *звёздочках* отображается обычным цветом
 
+// ============================================================
+// ЭКРАНИРОВАНИЕ ЗВЕЗДОЧЕК * И ТИЛЬДЫ ~
+// ============================================================
+// Проблема:  * — звездочка используются для выделения цветом, но как тогда 
+//                показать сам символ * внутри цветного текста?
+//
+// Решение:   ~* — тильда перед звездочкой экранирует её.
+//                 Тильда играет роль "служебного символа" и исчезает,
+//                 а звездочка остается как обычный символ.
+//
+// Пример:    *Pumpkin* text *"~*"*
+//
+// Результат:  Pumpkin — цветной текст (внутри первых звездочек * *).
+//             text    — обычный текст.
+//             "*"     — цветной текст (внутри вторых звездочек * *), 
+//                         где комбинация символов ~* превратилась в простую уже выделенную акцентным цветом звездочку *.
+//
+//    Хочешь сделать цветной САМ символ тильды (~)?
+//    Используй /~/ внутри звездочек: */~/*
+//
+//    Пример:  *Hello /~/* → цветной текст "Hello ~"
+//    Последовательность /~/ заменяется на ~ уже внутри выделения
+// ============================================================
+
 const UniversalText = ({
     customClass  = '',
     fontFamily   = '', 
@@ -56,8 +80,10 @@ const UniversalText = ({
             ? text.split('.').slice(0, sentenceCount / 2).join('.') + '.'
             : text
 
+        const starsReplace = processedText.replaceAll('~*', '~~').replaceAll('/~/', '~')
         // Парсим акцентные части
-        const parts = processedText.split(/(\*.*?\*)/g)
+        const parts = starsReplace.split(/(\*.*?\*)/g)
+        
 
         let colorText = color[0]
         if(color.length > 1) { colorText = theme === 'dark' ? color[0] : color[1] }
@@ -71,7 +97,7 @@ const UniversalText = ({
                         style={{ color: enableAccent ? `var(--accent-text-${currentColor})` : `${colorText}`, fontSize, fontFamily, fontWeight }}
                         className={`${styles.accentText} ${customClass}`}
                     >
-                        {part.slice(1, -1)}
+                        {part.slice(1, -1).replaceAll('~~', '*')}
                     </span>
                 )
             }
