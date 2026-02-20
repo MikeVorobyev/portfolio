@@ -46,8 +46,8 @@ const AboutBioCard = () => {
                         {/* Заголовок */}
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "*Before Web Development:*", 
-                                ru: "*До веб-разработки:*" 
+                                en: "Before Web Development:", 
+                                ru: "До веб-разработки:" 
                             }}
                         />
 
@@ -86,8 +86,8 @@ const AboutBioCard = () => {
                         {/* Заголовок проектов */}
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "*Notable projects:*", 
-                                ru: "*Из крупных проектов:*" 
+                                en: "Notable projects:", 
+                                ru: "Из крупных проектов:" 
                             }}
                         />
 
@@ -116,8 +116,8 @@ const AboutBioCard = () => {
                         {/* Заголовок IT */}
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "*Path into IT:*", 
-                                ru: "*Путь в IT:*" 
+                                en: "Path into IT:", 
+                                ru: "Путь в IT:" 
                             }}
                         />
 
@@ -156,8 +156,17 @@ const AboutBioCard = () => {
                         {/* Стек */}
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "*Tech Stack:* React • JavaScript • TypeScript • Zustand • Redux Toolkit • SCSS • HTML • CSS • Git", 
-                                ru: "*Стек:* React • JavaScript • TypeScript • Zustand • Redux Toolkit • SCSS • HTML • CSS • Git" 
+                                en: "Tech Stack:", 
+                                ru: "Стек:" 
+                            }}
+                        />
+
+                        {/* <br /> */}
+
+                        <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
+                            contentText={{ 
+                                en: "React *•* JavaScript *•* TypeScript *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git", 
+                                ru: "React *•* JavaScript *•* TypeScript *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git" 
                             }}
                         />
                     </div>
