@@ -75,7 +75,7 @@ const VideoPreview = ({ videoYouTube, videoRuTube }) => {
                             className={styles.youTube_player}
                             src={videoYouTube}
                             title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboardWrite; encryptedMedia; gyroscope; pictureInPicture; webShare"
                             allowFullScreen
                         />
                     </div>
@@ -107,7 +107,7 @@ const VideoPreview = ({ videoYouTube, videoRuTube }) => {
                             className={styles.ruTube_player}
                             src={videoRuTube}
                             title="RuTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboardWrite; encryptedMedia; gyroscope; pictureInPicture; webShare"
                             webkitAllowFullScreen 
                             mozallowfullscreen 
                             allowFullScreen

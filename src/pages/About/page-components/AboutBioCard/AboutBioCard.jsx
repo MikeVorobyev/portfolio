@@ -160,9 +160,6 @@ const AboutBioCard = () => {
                                 ru: "Стек:" 
                             }}
                         />
-
-                        {/* <br /> */}
-
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
                                 en: "React *•* JavaScript *•* TypeScript *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git", 
