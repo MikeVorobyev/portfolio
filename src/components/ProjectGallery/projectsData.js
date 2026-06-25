@@ -116,8 +116,8 @@ const projects = [
         description_ru: 'Сайт-портфолио на React и Zustand, демонстрирующий все мои проекты. Оснащено динамической системой из 20 акцентных цветов на CSS Houdini, темной и светлой темами, полной поддержкой двух языков (EN/RU). Включает библиотеку UI-компонентов (UniversalText, UniversalTitle, ContentBox), систему SVG-иконок с фабричным паттерном, анимированный промо-блок со сменяющимися фразами, бесконечную карусель навыков, адаптивные карточки проектов с мобильным аккордеоном, страницы проектов с двойным видеоплеером (YouTube/RuTube) и серверless форму обратной связи через Resend API. Также присутствует анимированная кнопка Telegram с вращением на 360° и динамический фавикон, синхронизированный с текущим акцентным цветом.',
         demo: 'https://portfolio-ivory-eta-yqlgrhzd54.vercel.app/',
         gitHubLink: 'https://github.com/MikeVorobyev/portfolio',
-        videoYouTube: 'https://www.youtube.com/embed/QlPuT0hry2Y',
-        videoRuTube: 'https://rutube.ru/play/embed/95a07e89c17ef6d847338afa312f3ccc',
+        videoYouTube: 'https://www.youtube.com/embed/9sF6l4Mx_bs',
+        videoRuTube: 'https://rutube.ru/play/embed/00870b78cc8aacbb928a9114a3c3ff09',
         mainFeatures: [
             {
                 featuresTitle_en: 'Dynamic Accent Color System with CSS Houdini',
