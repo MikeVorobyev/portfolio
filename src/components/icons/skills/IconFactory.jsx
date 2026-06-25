@@ -15,18 +15,18 @@ const IconFactory = memo(({
     const IconComponent = iconLibrary[name_ID.toLowerCase()]
     
     return (
-    <IconComponent
-      width={size}
-      height={size}
-      color={color}
-      style={{ 
-        cursor: 'pointer', 
-        ...style,
-        WebkitUserSelect: 'none',
-        MozUserSelect: 'none',
-        userSelect: 'none'
-      }}
-    />
+      <IconComponent
+          width={size}
+          height={size}
+          color={color}
+          style={{ 
+            cursor: 'pointer', 
+            ...style,
+            WebkitUserSelect: 'none',
+            MozUserSelect: 'none',
+            userSelect: 'none'
+          }}
+      />
     )
   }, [name_ID, size, color, style])
 

@@ -146,8 +146,8 @@ const AboutBioCard = () => {
                         {/* Текущие достижения */}
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "*Currently:* 530 solved problems, rank *3 kyu* (top 0.8%). I work with *React, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS*. I handle layout and JavaScript independently. Interested in *vibe coding* and working with neural networks.", 
-                                ru: "*Сейчас:* 530 решенных задач, ранг *3 kyu* (топ 0.8%). В работе использую *React, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS*. Верстку и JS пишу самостоятельно. Интересуюсь *вайбкодингом* и работой с нейросетями." 
+                                en: "*Currently:* 530 solved problems, rank *3 kyu* (top 0.8%). I work with *React, Vite, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS*. I handle layout and JavaScript independently. Interested in *vibe coding* and working with neural networks.", 
+                                ru: "*Сейчас:* 530 решенных задач, ранг *3 kyu* (топ 0.8%). В работе использую *React, Vite, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS*. Верстку и JS пишу самостоятельно. Интересуюсь *вайбкодингом* и работой с нейросетями." 
                             }}
                         />
 
@@ -162,8 +162,8 @@ const AboutBioCard = () => {
                         />
                         <UniversalText enableAccent={true} customClass={styles.biography} color={['#fff', '#000']} fontFamily={'var(--font-subtitle-en)'}
                             contentText={{ 
-                                en: "React *•* JavaScript *•* TypeScript *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git", 
-                                ru: "React *•* JavaScript *•* TypeScript *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git" 
+                                en: "React *•* Vite *•* JavaScript *•* TypeScript *•* Zod *•* TanStack Router *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git", 
+                                ru: "React *•* Vite *•* JavaScript *•* TypeScript *•* Zod *•* TanStack Router *•* Zustand *•* Redux Toolkit *•* SCSS *•* HTML *•* CSS *•* Git" 
                             }}
                         />
                     </div>

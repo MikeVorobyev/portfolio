@@ -108,8 +108,6 @@ const VideoPreview = ({ videoYouTube, videoRuTube }) => {
                             src={videoRuTube}
                             title="RuTube video player"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            webkitAllowFullScreen 
-                            mozallowfullscreen 
                             allowFullScreen
                         />
                     </div>

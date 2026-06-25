@@ -55,16 +55,16 @@
 
 // ==================== ЦВЕТА ДЛЯ ТЕКСТА ПАСТЕЛЬНЫЕ ====================
 :root {
-  --accent-text-mint: #26A69A;        // было #48c9b0
-  --accent-text-lavender: #8E44AD;    // было #bb8fce  
-  --accent-text-peach: #FF8C00;       // было #f8c471
-  --accent-text-sky: #3498DB;         // было #85c1e9
-  --accent-text-rose: #E74C3C;        // было #f1948a
-  --accent-text-aqua: #16A085;        // было #73c6b6
-  --accent-text-lilac: #9B59B6;       // было #c39bd3
-  --accent-text-sand: #95A5A6;        // было #d7bde2
-  --accent-text-coral: #FF6B6B;       // было #f5b7b1
-  --accent-text-seafoam: #1ABC9C;     // было #76d7c4
+  --accent-text-mint: #26A69A;
+  --accent-text-lavender: #8E44AD;  
+  --accent-text-peach: #FF8C00;
+  --accent-text-sky: #3498DB;
+  --accent-text-rose: #E74C3C;
+  --accent-text-aqua: #16A085;
+  --accent-text-lilac: #9B59B6;
+  --accent-text-sand: #c288da;
+  --accent-text-coral: #FF6B6B;
+  --accent-text-seafoam: #1ABC9C;
 }
 
 // ==================== АКЦЕНТНЫЕ ГРАДИЕНТЫ (20 цветов) ====================
@@ -277,26 +277,8 @@
 }
 
 // ==================== СВЕТЛАЯ ТЕМА ====================
-// .light_gradient_transition {
-//   background: linear-gradient(135deg, var(--light-gradient-primary), var(--light-gradient-secondary));
-//   transition: --light-gradient-primary 3s ease, --light-gradient-secondary 3s ease;
-// }
 
 .light_bg_transition {
   background: linear-gradient(135deg, var(--light-bg-primary), var(--light-bg-secondary));
   transition: --light-bg-primary 3s ease, --light-bg-secondary 3s ease;
 }
-
-
-
-// Эффекты при наведении и нажатии
-// transition: filter 0.3s ease, transform 0.3s ease;
-            
-//     &:hover {
-//         transform: scale(1.05);
-//     }
-
-//     &:active {
-//         filter: brightness(0.9) saturate(0.9);
-//         transform: scale(0.9);
-//     }

@@ -13,13 +13,13 @@ const AboutSection = () => {
 const shortBio = {
   en: `Graduated from the Lvov Cultural College. Worked as a guitar teacher, sound engineer, and video editor. Composed music for AudioJingle, created video projects for companies and government agencies, including work for the Karelian culture festival "Oma Randa" (3D video, anthem arrangement).
 
-Started web development with HTML, CSS, and JavaScript on Code Basics. Continued with React, TypeScript, Zustand, Redux Toolkit through self-study. Solved problems on Codewars.
+Started web development with HTML, CSS, and JavaScript on Code Basics. Continued with React, Vite, TypeScript, Zustand, Redux Toolkit through self-study. Solved problems on Codewars.
 
 Currently working with React, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS.`,
 
   ru: `Окончил Училище Культуры им. Львова. Работал преподавателем гитары, звукорежиссером и видеомонтажером. Писал музыку для AudioJingle, делал видеоролики для компаний и государственных служб, участвовал в создании контента для фестиваля "Ома Ранда" (3D-видео, аранжировка гимна).
 
-Начал изучать веб-разработку с HTML, CSS и JavaScript на Code Basics. Дальше самостоятельно осваивал React, TypeScript, Zustand, Redux Toolkit. Решал задачи на Codewars.
+Начал изучать веб-разработку с HTML, CSS и JavaScript на Code Basics. Дальше самостоятельно осваивал React, Vite, TypeScript, Zustand, Redux Toolkit. Решал задачи на Codewars.
 
 Сейчас работаю с React, JavaScript, TypeScript, Zustand, Redux Toolkit, SCSS.`
 };

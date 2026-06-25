@@ -16,7 +16,10 @@ const About = () => {
         { id: 'HTML',           title: 'HTML',             color: true },
         { id: 'NodeJS',         title: 'NodeJS',           color: false },
         { id: 'TypeScript',     title: 'TypeScript',       color: false },
+        { id: 'Zod',            title: 'Zod',              color: false },
+        { id: 'TanStackRouter', title: 'TanStack Router',  color: false },
         { id: 'React',          title: 'React',            color: false },
+        { id: 'Vite',           title: 'Vite',             color: false },
         { id: 'Redux',          title: 'Redux',            color: false },
         { id: 'Zustand',        title: 'Zustand',          color: false },
         { id: 'Photoshop',      title: 'Photoshop',        color: false },
@@ -30,7 +33,7 @@ const About = () => {
         { id: 'Figma',          title: 'Figma',            color: false },
         { id: 'cinema4d',       title: 'Cinema 4D',        color: false },
         { id: 'Cubase',         title: 'Cubase',           color: false },
-        { id: 'Samplitude',     title: 'MAGIX Samplitude', color: false }
+        { id: 'Samplitude',     title: 'MAGIX Samplitude', color: false },
     ])
 
     return (
