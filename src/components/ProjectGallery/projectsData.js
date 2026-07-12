@@ -12,6 +12,7 @@ import IconBootstrap from '../icons/skilsForCards/IconBootstrap/IconBootstrap';
 import IconVite from '../icons/skilsForCards/IconVite/IconVite';
 import IconTyeScript from '../icons/skilsForCards/IconTyeScript/IconTyeScript';
 import IconOxlint from '../icons/skilsForCards/IconOxlint/IconOxlint';
+// import IconAxios from '../icons/skilsForCards/IconAxios/IconZustand';
 // import IconZod from '../icons/skilsForCards/IconZod/IconZod';
 // import IconTanStackRouter from '../icons/skilsForCards/IconTanStackRouter/IconTanStackRouter';
 

@@ -22,6 +22,7 @@ const About = () => {
         { id: 'Vite',           title: 'Vite',             color: false },
         { id: 'Redux',          title: 'Redux',            color: false },
         { id: 'Zustand',        title: 'Zustand',          color: false },
+        { id: 'Axios',          title: 'Axios',            color: false },
         { id: 'Photoshop',      title: 'Photoshop',        color: false },
         { id: 'AfterEffects',   title: 'After Effects',    color: false },
         { id: 'PremierePro',    title: 'Premiere Pro',     color: false },

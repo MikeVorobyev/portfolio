@@ -1177,6 +1177,15 @@ const vscode = memo(({ color, ...props }) => (
         </svg>
     ))
 
+    const axios = memo(({ color, ...props }) => (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none" {...props}>
+            <path fill={color || "rgb(90,41,228)"} fillRule="nonzero"
+                d="M33.2049 8.69904L33.2049 66.8919L26.8629 71.9998L26.8629 23.5914L14.925 23.5914L33.2049 8.69904L33.2049 8.69904ZM44.8028 0L44.8028 
+                47.3017L57.075 47.3017L38.4737 62.5677L38.4737 4.4067L44.8028 0Z"  
+            />
+        </svg>
+    ));
+
 const iconLibrary = {
   javascript,
   css,
@@ -1202,6 +1211,7 @@ const iconLibrary = {
   cinema4d,
   cubase,
   samplitude,
+  axios,
 }
 
 export default iconLibrary
