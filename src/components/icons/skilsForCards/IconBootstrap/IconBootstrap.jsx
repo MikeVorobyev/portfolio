@@ -1,6 +1,6 @@
 const IconBootstrap = ({ size, color, customClass = '' }) => {
     return (
-        <svg className={customClass}  viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"  width={size || 60} height={size || 60} fill="none" customFrame="#000000">
+        <svg className={customClass}  viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"  width={size || 60} height={size || 60} fill="none">
             <title>Bootstrap</title>
             <g>
                 <rect width="60.000000" height="60.000000" x="0.000000" y="0.000000" rx="10.000000" fill={color ||"rgb(57,12,130)"} />

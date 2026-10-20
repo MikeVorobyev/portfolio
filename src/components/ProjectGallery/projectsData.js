@@ -1,5 +1,6 @@
 import IconReact from '../icons/skilsForCards/IconReact/IconReact';
 import IconJS from '../icons/skilsForCards/IconJS/IconJS';
+import IconRedux from '../icons/skilsForCards/IconRedux/IconRedux';
 import IconZustand from '../icons/skilsForCards/IconZustand/IconZustand';
 import IconHTML from '../icons/skilsForCards/IconHTML/IconHTML';
 import IconCSS from '../icons/skilsForCards/IconCSS/IconCSS';
@@ -12,95 +13,209 @@ import IconBootstrap from '../icons/skilsForCards/IconBootstrap/IconBootstrap';
 import IconVite from '../icons/skilsForCards/IconVite/IconVite';
 import IconTyeScript from '../icons/skilsForCards/IconTyeScript/IconTyeScript';
 import IconOxlint from '../icons/skilsForCards/IconOxlint/IconOxlint';
-// import IconAxios from '../icons/skilsForCards/IconAxios/IconZustand';
-// import IconZod from '../icons/skilsForCards/IconZod/IconZod';
-// import IconTanStackRouter from '../icons/skilsForCards/IconTanStackRouter/IconTanStackRouter';
-
-
-//  [IconReact, IconJS, IconZustand, IconHTML, IconCSS, IconSCSS, IconPixo, IconFigma, IconAdobePhotoshop, IconJQuery,]
+import IconAxios from '../icons/skilsForCards/IconAxios/IconAxios';
+import IconZod from '../icons/skilsForCards/IconZod/IconZod';
+import IconTanStackRouter from '../icons/skilsForCards/IconTanStackRouter/IconTanStackRouter';
+import IconCloudflare from '../icons/skilsForCards/IconCloudflare/IconCloudflare';
 
 // title_en - полная версия заголовка
 // mobile_title_en - может быть короткой версией заголовка для того, чтобы помещалась в хедере карточки-аккордиона
 // header_title_short_en - короткая версия для шапки-хедера('PageTitlrs') в самом верху страниц
 
 const projects = [
-{ 
-    id: 12,
-    slug: 'to-do-typescript',
-    title_en: 'To Do TypeScript',
-    title_ru: 'Список дел TypeScript',
-    mobile_title_en: 'To Do TypeScript',
-    mobile_title_ru: 'Список дел TypeScript',
-    header_title_short_en: 'To Do',
-    header_title_short_ru: 'Список дел',
-    subtitle_en: 'Frontend',
-    subtitle_ru: 'Frontend',
-    screenshot: require('../../images/projects_images/image_portfolio/12-todo-typescript.jpg'),
-    iconSkills: [ IconReact, IconTyeScript, IconVite, IconOxlint, IconZustand, IconSCSS, IconPixo ],
-    description_en: 'A task management application built with React and TypeScript, featuring strict type safety, Zustand state management with localStorage persistence, and custom SVG icon components. The interface includes a custom checkbox with an animated checkmark, inline task editing with keyboard navigation (Enter to save, Escape to cancel), and smooth icon animations on interaction. Built with Vite for fast development, SCSS modules for style isolation, and Oxlint for code quality. Fully responsive design adapts from mobile to desktop.',
-    description_ru: 'Приложение для управления задачами на React и TypeScript со строгой типизацией, управлением состоянием через Zustand с сохранением в localStorage и кастомными SVG-иконками как React-компонентами. Интерфейс включает кастомный чекбокс с анимированной галочкой, встроенное редактирование задач с клавиатурной навигацией (Enter для сохранения, Escape для отмены) и плавные анимации иконок при взаимодействии. Собран на Vite для быстрой разработки, SCSS-модули для изоляции стилей, Oxlint для качества кода. Полностью адаптивный дизайн от мобильных до десктопных устройств.',
-    demo: 'https://mikevorobyev.github.io/to-do-typescript/',
-    gitHubLink: 'https://github.com/MikeVorobyev/to-do-typescript',
-    videoYouTube: 'https://www.youtube.com/embed/oJyOura2ljE',
-    videoRuTube: 'https://rutube.ru/play/embed/dfa67be9481991527930bad87a0d97fd',
-    mainFeatures: [
-        {
-            featuresTitle_en: 'Strict TypeScript Type Safety',
-            featuresTitle_ru: 'Строгая типизация на TypeScript',
-            featuresDescription_en: 'The entire application is built with *strict TypeScript* configuration, ensuring type safety across all components, state management, and business logic. Custom interfaces define the shape of tasks (*Task*), store structure (*ToDoStore*), and component props (*InputTaskProps*), catching potential errors at compile time rather than runtime. This approach improves code maintainability and provides excellent IDE autocomplete support.',
-            featuresDescription_ru: 'Всё приложение построено со *строгой конфигурацией TypeScript*, обеспечивая типобезопасность во всех компонентах, управлении состоянием и бизнес-логике. Кастомные интерфейсы определяют структуру задач (*Task*), стора (*ToDoStore*) и пропсов компонентов (*InputTaskProps*), выявляя потенциальные ошибки на этапе компиляции, а не выполнения. Такой подход улучшает поддерживаемость кода и обеспечивает отличную автодополняемость в IDE.'
-        },
-        {
-            featuresTitle_en: 'Modern Build Toolchain with Vite and Oxlint',
-            featuresTitle_ru: 'Современный инструментарий сборки с Vite и Oxlint',
-            featuresDescription_en: 'The project uses *Vite* as the build tool, providing *instant server start* and *lightning-fast HMR* (Hot Module Replacement) during development. *Oxlint* is configured for code quality, catching potential issues and enforcing best practices.',
-            featuresDescription_ru: 'Проект использует *Vite* как инструмент сборки, обеспечивая *мгновенный запуск сервера* и *молниеносную HMR* (Hot Module Replacement) во время разработки. *Oxlint* настроен для качества кода, выявляя потенциальные проблемы и обеспечивая лучшие практики.'
-        },
-        {
-            featuresTitle_en: 'Zustand State Management with Persist Middleware',
-            featuresTitle_ru: 'Управление состоянием через Zustand с Persist Middleware',
-            featuresDescription_en: 'Application state is managed using *Zustand* — a lightweight, modern state management library. The *persist middleware* automatically saves all tasks to *localStorage*, ensuring data survives page reloads. When the app loads, tasks are seamlessly restored from storage. The store provides four core actions: *createTask*, *updateTask*, *removeTask*, and *isDoneTask*, all with proper TypeScript typing. This approach eliminates the need for manual localStorage handling while maintaining type safety.',
-            featuresDescription_ru: 'Состояние приложения управляется через *Zustand* — лёгкую современную библиотеку для управления состоянием. *Middleware persist* автоматически сохраняет все задачи в *localStorage*, обеспечивая сохранность данных при перезагрузке страницы. При загрузке приложения задачи бесшовно восстанавливаются из хранилища. Стор предоставляет четыре основных действия: *createTask*, *updateTask*, *removeTask* и *isDoneTask*, все с правильной типизацией TypeScript. Такой подход устраняет необходимость ручной работы с localStorage, сохраняя типобезопасность.'
-        },
-        {
-            featuresTitle_en: 'Custom SVG Components as React Elements',
-            featuresTitle_ru: 'Кастомные SVG-компоненты как React-элементы',
-            featuresDescription_en: 'All icons (pen, trash can, checkmark) are implemented as *React components* that accept *className* and other SVG attributes via TypeScript interfaces extending *SVGProps<SVGSVGElement>*. This approach allows full styling control through CSS while maintaining type safety. Icons are created from custom SVG designs in Pixo, ensuring pixel-perfect graphics that scale smoothly at any size.',
-            featuresDescription_ru: 'Все иконки (ручка, корзина, галочка) реализованы как *React-компоненты*, принимающие *className* и другие SVG-атрибуты через TypeScript-интерфейсы, расширяющие *SVGProps<SVGSVGElement>*. Такой подход позволяет полностью управлять стилями через CSS, сохраняя типобезопасность. Иконки созданы из кастомных SVG-дизайнов в Pixo, обеспечивая идеальную графику, которая плавно масштабируется при любом размере.'
-        },
-        {
-            featuresTitle_en: 'Custom Checkbox with Animated Checkmark',
-            featuresTitle_ru: 'Кастомный чекбокс с анимированной галочкой',
-            featuresDescription_en: 'The native checkbox is hidden (*display: none*) and replaced with a custom visual element using the *CSS adjacent sibling selector* (*input + div*). When the task is marked as done, a custom SVG checkmark appears inside the div with a *smooth fade-in and scale animation*. The checkbox container features a *gradient background* and *border styling* that matches the overall design.',
-            featuresDescription_ru: 'Нативный чекбокс скрыт (*display: none*) и заменён кастомным визуальным элементом с использованием *CSS-селектора соседнего элемента* (*input + div*). Когда задача отмечена как выполненная, внутри div появляется кастомная SVG-галочка с *плавной анимацией появления и масштабирования*. Контейнер чекбокса имеет *градиентный фон* и *стилизацию границ*, соответствующую общему дизайну.'
-        },
-        {
-            featuresTitle_en: 'Task Editing with Keyboard Navigation',
-            featuresTitle_ru: 'Редактирование задач с клавиатурной навигацией',
-            featuresDescription_en: 'Tasks can be edited by clicking the button with a pen icon. The component switches between display mode (*<p>* tag) and edit mode (*<input>* field) based on the *editedFlag* state. The input field automatically receives focus via the *autoFocus* attribute for immediate editing. *Keyboard shortcuts* enhance the user experience: *Enter* saves changes and exits edit mode, *Escape* cancels editing and restores the original title. This makes editing quick and keeps the interface clean.',
-            featuresDescription_ru: 'Задачи можно редактировать, нажав на кнопку с иконкой ручки. Компонент переключается между режимом отображения (тег *<p>*) и режимом редактирования (поле *<input>*) на основе состояния *editedFlag*. Поле ввода автоматически получает фокус через атрибут *autoFocus* для немедленного редактирования. *Горячие клавиши* улучшают пользовательский опыт: *Enter* сохраняет изменения и выходит из режима редактирования, *Escape* отменяет редактирование и восстанавливает исходный заголовок. Это делает редактирование быстрым и сохраняет интерфейс чистым.'
-        },
-        {
-            featuresTitle_en: 'Interactive Icon Animations',
-            featuresTitle_ru: 'Интерактивные анимации иконок',
-            featuresDescription_en: 'Icons feature *smooth animations* on interaction. The edit button icon changes color (from blue to red) and scales with a *animation* when entering edit mode, providing clear visual feedback. The trash icon animates on hover, suggesting interactivity.',
-            featuresDescription_ru: 'Иконки имеют *плавные анимации* при взаимодействии. Иконка кнопки редактирования меняет цвет (с синего на красный) и масштабируется с *анимацией* при входе в режим редактирования, обеспечивая чёткую визуальную обратную связь. Иконка корзины анимируется при наведении, подразумевая интерактивность.'
-        },
-        {
-            featuresTitle_en: 'Adaptive Design',
-            featuresTitle_ru: 'Адаптивный дизайн',
-            featuresDescription_en: 'The interface smoothly adapts to all screen sizes using *CSS media queries*. Layout, typography, and spacing adjust across key breakpoints. *Flexbox* ensures precise alignment, keeping the interface clean and comfortable on any device.',
-            featuresDescription_ru: 'Интерфейс плавно адаптируется под любые размеры экранов с помощью *CSS-медиазапросов*. Макет, типографика и отступы подстраиваются на ключевых контрольных точках. *Flexbox* обеспечивает точное выравнивание, сохраняя интерфейс чистым и удобным на любом устройстве.'
-        },
-        {
-            featuresTitle_en: 'SCSS Modules for Style Isolation',
-            featuresTitle_ru: 'SCSS-модули для изоляции стилей',
-            featuresDescription_en: 'All styles are written in *SCSS* and organized using *CSS Modules* (*.module.scss*). This approach ensures *style isolation* — class names are locally scoped by default, preventing style conflicts between components.',
-            featuresDescription_ru: 'Все стили написаны на *SCSS* и организованы с использованием *CSS-модулей* (*.module.scss*). Такой подход обеспечивает *изоляцию стилей* — имена классов по умолчанию имеют локальную область видимости, предотвращая конфликты стилей между компонентами.'
-        },
-    ],
-},
         { 
+            id: 14,
+            slug: 'weather-website',
+            title_en: 'Weather Website',
+            title_ru: 'Сайт Погоды',
+            mobile_title_en: 'Weather Website',
+            mobile_title_ru: 'Сайт Погоды',
+            header_title_short_en: 'Weather Website',
+            header_title_short_ru: 'Сайт Погоды',
+            subtitle_en: 'Frontend',
+            subtitle_ru: 'Frontend',
+            screenshot: require('../../images/projects_images/image_portfolio/14-weather-website.jpg'),
+            iconSkills: [ IconReact, IconTyeScript, IconTanStackRouter, IconZod, IconAxios, IconOxlint, IconSCSS, IconPixo, IconAdobePhotoshop, IconCloudflare],
+        description_en: 'A modern, type-safe weather application built with React, TypeScript, and TanStack Router. Features robust runtime data validation with Zod, optimized API requests via Axios, and a custom Cloudflare Workers proxy to bypass CORS restrictions and ensure reliable data fetching from Open-Meteo. Styled with SCSS Modules and custom SVG graphics.',
+        description_ru: 'Современное типобезопасное приложение для прогноза погоды на React, TypeScript и TanStack Router. Включает надежную валидацию данных в рантайме через Zod, оптимизированные запросы к API через Axios и кастомный прокси на Cloudflare Workers для обхода CORS-ограничений и гарантированного получения данных от Open-Meteo. Стилизовано с помощью SCSS-модулей и кастомной SVG-графики.',
+        demo: 'https://mikevorobyev.github.io/weather-website/',
+        gitHubLink: 'https://github.com/MikeVorobyev/weather-website',
+        videoYouTube: 'https://www.youtube.com/embed/9sF6l4Mx_bs', // Замени на реальное видео, если есть
+        videoRuTube: 'https://rutube.ru/play/embed/00870b78cc8aacbb928a9114a3c3ff09', // Замени на реальное видео, если есть
+        mainFeatures: [
+            {
+                featuresTitle_en: 'Custom Cloudflare Proxy for Reliable API Fetching',
+                featuresTitle_ru: 'Кастомный прокси на Cloudflare для надежного получения данных',
+                featuresDescription_en: 'To bypass CORS restrictions and potential IP blocking from the Open-Meteo API, a custom serverless proxy was built using *Cloudflare Workers*. It intercepts frontend requests, injects a legitimate *User-Agent* header, and forwards the data with proper *CORS headers* (`Access-Control-Allow-Origin: *`), ensuring 100% uptime and seamless data delivery regardless of browser security policies.',
+                featuresDescription_ru: 'Для обхода CORS-ограничений и потенциальных блокировок IP со стороны API Open-Meteo был разработан кастомный serverless-прокси на *Cloudflare Workers*. Он перехватывает запросы с фронтенда, добавляет легитимный заголовок *User-Agent* и возвращает данные с правильными *CORS-заголовками*, гарантируя 100% доступность и бесшовную передачу данных независимо от политик безопасности браузера.'
+            },
+            {
+                featuresTitle_en: 'Strict Type Safety and Runtime Validation with Zod',
+                featuresTitle_ru: 'Строгая типизация и валидация данных в рантайме через Zod',
+                featuresDescription_en: 'The application leverages *TypeScript* for end-to-end type safety. *Zod* schemas are used to validate the incoming weather data from the API before it reaches the UI. This ensures that the application state remains predictable and prevents runtime crashes due to unexpected or malformed API response structures.',
+                featuresDescription_ru: 'Приложение использует *TypeScript* для сквозной типобезопасности. Схемы *Zod* применяются для валидации входящих данных о погоде от API до того, как они попадут в UI. Это гарантирует предсказуемость состояния приложения и предотвращает ошибки выполнения из-за неожиданной или некорректной структуры ответа сервера.'
+            },
+            {
+                featuresTitle_en: 'Modern, Type-Safe Routing with TanStack Router',
+                featuresTitle_ru: 'Современный типобезопасный роутинг с TanStack Router',
+                featuresDescription_en: 'Replaces traditional React Router with *TanStack Router*, providing fully type-safe routing and built-in search parameter validation. Routes and their parameters are strictly typed, eliminating typos and ensuring that URL states perfectly match expected data shapes, resulting in an exceptional developer experience.',
+                featuresDescription_ru: 'Вместо традиционного React Router используется *TanStack Router*, обеспечивающий полностью типобезопасный роутинг и встроенную валидацию параметров поиска (search params). Маршруты и их параметры строго типизированы, что исключает опечатки и гарантирует идеальное соответствие URL-состояний ожидаемым типам данных, обеспечивая превосходный DX.'
+            },
+            {
+                featuresTitle_en: 'Optimized Data Fetching with Axios',
+                featuresTitle_ru: 'Оптимизированное получение данных через Axios',
+                featuresDescription_en: '*Axios* is configured with custom interceptors to handle requests to the Cloudflare proxy efficiently. It manages loading states, centralized error handling, and provides a clean, promise-based API layer for all asynchronous weather data operations.',
+                featuresDescription_ru: '*Axios* настроен с кастомными интерсепторами для эффективной работы с Cloudflare-прокси. Он управляет состояниями загрузки, централизованной обработкой ошибок и предоставляет чистый, основанный на промисах слой API для всех асинхронных операций с данными о погоде.'
+            },
+            {
+                featuresTitle_en: 'Animated Custom Icons and SCSS Modules',
+                featuresTitle_ru: 'Анимированные кастомные иконки и SCSS-модули',
+                featuresDescription_en: 'The interface is styled using *SCSS Modules* for strict style isolation and maintainability. The weather icons are based on the open-source *Meteocons* set, but were heavily refined and customized in *Adobe Photoshop* and *Pixo* to perfectly match the project\'s unique aesthetic. These icons are implemented as *animated React SVG components*, providing crisp, scalable, and engaging visual feedback on any display resolution.',
+                featuresDescription_ru: 'Интерфейс стилизован с помощью *SCSS-модулей* для строгой изоляции стилей и простоты поддержки. Погодные иконки взяты из набора *Meteocons*, но были значительно доработаны и кастомизированы в *Adobe Photoshop* и *Pixo*, чтобы идеально соответствовать уникальной эстетике проекта. Эти иконки реализованы как *анимированные React-компоненты SVG*, обеспечивая четкое, масштабируемое и вовлекающее визуальное отображение на любом разрешении экрана.'
+            },
+            {
+                featuresTitle_en: 'Lightning-Fast Code Quality with Oxlint',
+                featuresTitle_ru: 'Молниеносное качество кода с Oxlint',
+                featuresDescription_en: 'The project utilizes *Oxlint* as a high-performance alternative to ESLint. Written in Rust, it catches potential bugs, enforces best practices, and maintains code consistency in milliseconds, significantly speeding up the development workflow and CI/CD pipeline without sacrificing code quality.',
+                featuresDescription_ru: 'В проекте используется *Oxlint* как высокопроизводительная альтернатива ESLint. Написанный на Rust, он выявляет потенциальные ошибки, обеспечивает соблюдение лучших практик и поддерживает согласованность кода за миллисекунды, значительно ускоряя процесс разработки и CI/CD пайплайн без потери качества кода.'
+            }
+        ],
+        },
+        { 
+        id: 13,
+        slug: 'react-pizza',
+        title_en: 'React Pizza',
+        title_ru: 'React Пицца',
+        mobile_title_en: 'React Pizza',
+        mobile_title_ru: 'React Пицца',
+        header_title_short_en: 'React Pizza',
+        header_title_short_ru: 'React Пицца',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/13-react-pizza.jpg'),
+        iconSkills: [ IconReact, IconJS, IconRedux, IconAxios, IconSCSS, IconFigma, IconAdobePhotoshop, IconCloudflare],
+        description_en: 'A fully functional e-commerce pizza ordering application built with React and Redux Toolkit, powered by a custom serverless API (Cloudflare Workers). Features advanced filtering, real-time debounced search, dynamic sorting, and URL state synchronization. Includes a persistent shopping cart with LocalStorage, smooth skeleton loading states, and responsive pagination.',
+        description_ru: 'Полнофункциональное приложение для заказа пиццы на React и Redux Toolkit, работающее в связке с кастомным serverless API (Cloudflare Workers). Включает продвинутую фильтрацию, мгновенный поиск с задержкой (debounce), динамическую сортировку и синхронизацию состояния с URL. Реализована корзина с сохранением в LocalStorage, плавные скелетоны загрузки и адаптивная пагинация.',
+        demo: 'https://mikevorobyev.github.io/react-pizza/?category=0&page=1&sortBy=rating',
+        gitHubLink: 'https://github.com/MikeVorobyev/react-pizza',
+        videoYouTube: 'https://www.youtube.com/embed/9sF6l4Mx_bs',
+        videoRuTube: 'https://rutube.ru/play/embed/00870b78cc8aacbb928a9114a3c3ff09',
+        mainFeatures: [
+            {
+                featuresTitle_en: 'Redux Toolkit State Management',
+                featuresTitle_ru: 'Управление состоянием через Redux Toolkit',
+                featuresDescription_en: 'The application uses *Redux Toolkit* for predictable and centralized state management. Separate slices handle the shopping cart, active filters, and pizza data, ensuring clean architecture. The cart state is automatically synchronized with *localStorage*, preserving user selections across page reloads.',
+                featuresDescription_ru: 'Приложение использует *Redux Toolkit* для предсказуемого и централизованного управления состоянием. Отдельные слайсы отвечают за корзину, активные фильтры и данные о пицце, обеспечивая чистую архитектуру. Состояние корзины автоматически синхронизируется с *localStorage*, сохраняя выбор пользователя при перезагрузке страницы.'
+            },
+            {
+                featuresTitle_en: 'Custom Serverless API with Cloudflare Workers',
+                featuresTitle_ru: 'Кастомное Serverless API на Cloudflare Workers',
+                featuresDescription_en: 'Instead of relying on third-party mock APIs, the project communicates with a custom-built backend deployed on *Cloudflare Workers*. The server handles *server-side filtering, search, dynamic sorting, and pagination*, returning optimized JSON payloads. It also properly manages *CORS headers* for seamless cross-origin requests from the GitHub Pages frontend, demonstrating a full understanding of client-server interaction.',
+                featuresDescription_ru: 'Вместо сторонних мок-API, проект взаимодействует с кастомным бэкендом, развернутым на *Cloudflare Workers*. Сервер берет на себя *фильтрацию, поиск, динамическую сортировку и пагинацию на стороне сервера*, возвращая оптимизированные JSON-ответы. Также реализована правильная обработка *CORS-заголовков* для бесшовной работы с фронтендом на GitHub Pages, что демонстрирует полное понимание клиент-серверного взаимодействия.'
+            },
+            {
+                featuresTitle_en: 'Advanced Filtering and Debounced Search',
+                featuresTitle_ru: 'Продвинутая фильтрация и поиск с задержкой (Debounce)',
+                featuresDescription_en: 'Users can filter pizzas by category and sort them by price or rating. The search input utilizes *lodash.debounce* to optimize API requests, triggering the search only after the user stops typing for 400ms, reducing server load and improving interface responsiveness.',
+                featuresDescription_ru: 'Пользователи могут фильтровать пиццы по категориям и сортировать их по цене или рейтингу. Поле поиска использует *lodash.debounce* для оптимизации запросов к API, запуская поиск только через 400 мс после прекращения ввода, что снижает нагрузку на сервер и улучшает отзывчивость интерфейса.'
+            },
+            {
+                featuresTitle_en: 'URL State Synchronization with Query Strings',
+                featuresTitle_ru: 'Синхронизация состояния с URL через query-строки',
+                featuresDescription_en: 'All active filters, sorting parameters, and the current page number are serialized into the browser\'s URL using the *qs* library. This allows users to share direct links to specific filtered views, and the app seamlessly restores the exact state when the link is opened.',
+                featuresDescription_ru: 'Все активные фильтры, параметры сортировки и текущий номер страницы сериализуются в URL браузера с помощью библиотеки *qs*. Это позволяет пользователям делиться прямыми ссылками на конкретные отфильтрованные представления, а приложение бесшовно восстанавливает точное состояние при открытии ссылки.'
+            },
+            {
+                featuresTitle_en: 'Optimized Loading States with Skeletons',
+                featuresTitle_ru: 'Оптимизированные состояния загрузки с помощью скелетонов',
+                featuresDescription_en: 'Instead of traditional spinners, the app uses *react-content-loader* to display animated skeleton screens while fetching data from the API. This approach reduces perceived loading time and provides a modern, polished user experience.',
+                featuresDescription_ru: 'Вместо традиционных спиннеров приложение использует *react-content-loader* для отображения анимированных скелетонов во время загрузки данных из API. Такой подход снижает субъективное время ожидания и обеспечивает современный, отполированный пользовательский опыт.'
+            },
+            {
+                featuresTitle_en: 'Responsive Pagination and Modular SCSS',
+                featuresTitle_ru: 'Адаптивная пагинация и модульная архитектура SCSS',
+                featuresDescription_en: 'The product list is divided into pages using *react-paginate* for efficient rendering of large datasets. All styles are written in *SCSS* using a modular, BEM-inspired methodology, guaranteeing style isolation and easy maintenance across all components.',
+                featuresDescription_ru: 'Список товаров разбит на страницы с помощью *react-paginate* для эффективного рендеринга больших наборов данных. Все стили написаны на *SCSS* с использованием модульной методологии, вдохновленной БЭМ, что гарантирует изоляцию стилей и простоту поддержки во всех компонентах.'
+            }
+        ],
+    },
+    { 
+        id: 12,
+        slug: 'to-do-typescript',
+        title_en: 'To Do TypeScript',
+        title_ru: 'Список дел TypeScript',
+        mobile_title_en: 'To Do TypeScript',
+        mobile_title_ru: 'Список дел TypeScript',
+        header_title_short_en: 'To Do',
+        header_title_short_ru: 'Список дел',
+        subtitle_en: 'Frontend',
+        subtitle_ru: 'Frontend',
+        screenshot: require('../../images/projects_images/image_portfolio/12-todo-typescript.jpg'),
+        iconSkills: [ IconReact, IconTyeScript, IconVite, IconOxlint, IconZustand, IconSCSS, IconPixo ],
+        description_en: 'A task management application built with React and TypeScript, featuring strict type safety, Zustand state management with localStorage persistence, and custom SVG icon components. The interface includes a custom checkbox with an animated checkmark, inline task editing with keyboard navigation (Enter to save, Escape to cancel), and smooth icon animations on interaction. Built with Vite for fast development, SCSS modules for style isolation, and Oxlint for code quality. Fully responsive design adapts from mobile to desktop.',
+        description_ru: 'Приложение для управления задачами на React и TypeScript со строгой типизацией, управлением состоянием через Zustand с сохранением в localStorage и кастомными SVG-иконками как React-компонентами. Интерфейс включает кастомный чекбокс с анимированной галочкой, встроенное редактирование задач с клавиатурной навигацией (Enter для сохранения, Escape для отмены) и плавные анимации иконок при взаимодействии. Собран на Vite для быстрой разработки, SCSS-модули для изоляции стилей, Oxlint для качества кода. Полностью адаптивный дизайн от мобильных до десктопных устройств.',
+        demo: 'https://mikevorobyev.github.io/to-do-typescript/',
+        gitHubLink: 'https://github.com/MikeVorobyev/to-do-typescript',
+        videoYouTube: 'https://www.youtube.com/embed/oJyOura2ljE',
+        videoRuTube: 'https://rutube.ru/play/embed/dfa67be9481991527930bad87a0d97fd',
+        mainFeatures: [
+            {
+                featuresTitle_en: 'Strict TypeScript Type Safety',
+                featuresTitle_ru: 'Строгая типизация на TypeScript',
+                featuresDescription_en: 'The entire application is built with *strict TypeScript* configuration, ensuring type safety across all components, state management, and business logic. Custom interfaces define the shape of tasks (*Task*), store structure (*ToDoStore*), and component props (*InputTaskProps*), catching potential errors at compile time rather than runtime. This approach improves code maintainability and provides excellent IDE autocomplete support.',
+                featuresDescription_ru: 'Всё приложение построено со *строгой конфигурацией TypeScript*, обеспечивая типобезопасность во всех компонентах, управлении состоянием и бизнес-логике. Кастомные интерфейсы определяют структуру задач (*Task*), стора (*ToDoStore*) и пропсов компонентов (*InputTaskProps*), выявляя потенциальные ошибки на этапе компиляции, а не выполнения. Такой подход улучшает поддерживаемость кода и обеспечивает отличную автодополняемость в IDE.'
+            },
+            {
+                featuresTitle_en: 'Modern Build Toolchain with Vite and Oxlint',
+                featuresTitle_ru: 'Современный инструментарий сборки с Vite и Oxlint',
+                featuresDescription_en: 'The project uses *Vite* as the build tool, providing *instant server start* and *lightning-fast HMR* (Hot Module Replacement) during development. *Oxlint* is configured for code quality, catching potential issues and enforcing best practices.',
+                featuresDescription_ru: 'Проект использует *Vite* как инструмент сборки, обеспечивая *мгновенный запуск сервера* и *молниеносную HMR* (Hot Module Replacement) во время разработки. *Oxlint* настроен для качества кода, выявляя потенциальные проблемы и обеспечивая лучшие практики.'
+            },
+            {
+                featuresTitle_en: 'Zustand State Management with Persist Middleware',
+                featuresTitle_ru: 'Управление состоянием через Zustand с Persist Middleware',
+                featuresDescription_en: 'Application state is managed using *Zustand* — a lightweight, modern state management library. The *persist middleware* automatically saves all tasks to *localStorage*, ensuring data survives page reloads. When the app loads, tasks are seamlessly restored from storage. The store provides four core actions: *createTask*, *updateTask*, *removeTask*, and *isDoneTask*, all with proper TypeScript typing. This approach eliminates the need for manual localStorage handling while maintaining type safety.',
+                featuresDescription_ru: 'Состояние приложения управляется через *Zustand* — лёгкую современную библиотеку для управления состоянием. *Middleware persist* автоматически сохраняет все задачи в *localStorage*, обеспечивая сохранность данных при перезагрузке страницы. При загрузке приложения задачи бесшовно восстанавливаются из хранилища. Стор предоставляет четыре основных действия: *createTask*, *updateTask*, *removeTask* и *isDoneTask*, все с правильной типизацией TypeScript. Такой подход устраняет необходимость ручной работы с localStorage, сохраняя типобезопасность.'
+            },
+            {
+                featuresTitle_en: 'Custom SVG Components as React Elements',
+                featuresTitle_ru: 'Кастомные SVG-компоненты как React-элементы',
+                featuresDescription_en: 'All icons (pen, trash can, checkmark) are implemented as *React components* that accept *className* and other SVG attributes via TypeScript interfaces extending *SVGProps<SVGSVGElement>*. This approach allows full styling control through CSS while maintaining type safety. Icons are created from custom SVG designs in Pixo, ensuring pixel-perfect graphics that scale smoothly at any size.',
+                featuresDescription_ru: 'Все иконки (ручка, корзина, галочка) реализованы как *React-компоненты*, принимающие *className* и другие SVG-атрибуты через TypeScript-интерфейсы, расширяющие *SVGProps<SVGSVGElement>*. Такой подход позволяет полностью управлять стилями через CSS, сохраняя типобезопасность. Иконки созданы из кастомных SVG-дизайнов в Pixo, обеспечивая идеальную графику, которая плавно масштабируется при любом размере.'
+            },
+            {
+                featuresTitle_en: 'Custom Checkbox with Animated Checkmark',
+                featuresTitle_ru: 'Кастомный чекбокс с анимированной галочкой',
+                featuresDescription_en: 'The native checkbox is hidden (*display: none*) and replaced with a custom visual element using the *CSS adjacent sibling selector* (*input + div*). When the task is marked as done, a custom SVG checkmark appears inside the div with a *smooth fade-in and scale animation*. The checkbox container features a *gradient background* and *border styling* that matches the overall design.',
+                featuresDescription_ru: 'Нативный чекбокс скрыт (*display: none*) и заменён кастомным визуальным элементом с использованием *CSS-селектора соседнего элемента* (*input + div*). Когда задача отмечена как выполненная, внутри div появляется кастомная SVG-галочка с *плавной анимацией появления и масштабирования*. Контейнер чекбокса имеет *градиентный фон* и *стилизацию границ*, соответствующую общему дизайну.'
+            },
+            {
+                featuresTitle_en: 'Task Editing with Keyboard Navigation',
+                featuresTitle_ru: 'Редактирование задач с клавиатурной навигацией',
+                featuresDescription_en: 'Tasks can be edited by clicking the button with a pen icon. The component switches between display mode (*<p>* tag) and edit mode (*<input>* field) based on the *editedFlag* state. The input field automatically receives focus via the *autoFocus* attribute for immediate editing. *Keyboard shortcuts* enhance the user experience: *Enter* saves changes and exits edit mode, *Escape* cancels editing and restores the original title. This makes editing quick and keeps the interface clean.',
+                featuresDescription_ru: 'Задачи можно редактировать, нажав на кнопку с иконкой ручки. Компонент переключается между режимом отображения (тег *<p>*) и режимом редактирования (поле *<input>*) на основе состояния *editedFlag*. Поле ввода автоматически получает фокус через атрибут *autoFocus* для немедленного редактирования. *Горячие клавиши* улучшают пользовательский опыт: *Enter* сохраняет изменения и выходит из режима редактирования, *Escape* отменяет редактирование и восстанавливает исходный заголовок. Это делает редактирование быстрым и сохраняет интерфейс чистым.'
+            },
+            {
+                featuresTitle_en: 'Interactive Icon Animations',
+                featuresTitle_ru: 'Интерактивные анимации иконок',
+                featuresDescription_en: 'Icons feature *smooth animations* on interaction. The edit button icon changes color (from blue to red) and scales with a *animation* when entering edit mode, providing clear visual feedback. The trash icon animates on hover, suggesting interactivity.',
+                featuresDescription_ru: 'Иконки имеют *плавные анимации* при взаимодействии. Иконка кнопки редактирования меняет цвет (с синего на красный) и масштабируется с *анимацией* при входе в режим редактирования, обеспечивая чёткую визуальную обратную связь. Иконка корзины анимируется при наведении, подразумевая интерактивность.'
+            },
+            {
+                featuresTitle_en: 'Adaptive Design',
+                featuresTitle_ru: 'Адаптивный дизайн',
+                featuresDescription_en: 'The interface smoothly adapts to all screen sizes using *CSS media queries*. Layout, typography, and spacing adjust across key breakpoints. *Flexbox* ensures precise alignment, keeping the interface clean and comfortable on any device.',
+                featuresDescription_ru: 'Интерфейс плавно адаптируется под любые размеры экранов с помощью *CSS-медиазапросов*. Макет, типографика и отступы подстраиваются на ключевых контрольных точках. *Flexbox* обеспечивает точное выравнивание, сохраняя интерфейс чистым и удобным на любом устройстве.'
+            },
+            {
+                featuresTitle_en: 'SCSS Modules for Style Isolation',
+                featuresTitle_ru: 'SCSS-модули для изоляции стилей',
+                featuresDescription_en: 'All styles are written in *SCSS* and organized using *CSS Modules* (*.module.scss*). This approach ensures *style isolation* — class names are locally scoped by default, preventing style conflicts between components.',
+                featuresDescription_ru: 'Все стили написаны на *SCSS* и организованы с использованием *CSS-модулей* (*.module.scss*). Такой подход обеспечивает *изоляцию стилей* — имена классов по умолчанию имеют локальную область видимости, предотвращая конфликты стилей между компонентами.'
+            },
+        ],
+    },
+    { 
         id: 11,
         slug: 'portfolio',
         title_en: 'Portfolio',
